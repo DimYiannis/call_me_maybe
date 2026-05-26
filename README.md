@@ -6,7 +6,7 @@
 ## Description
 This project implements a function calling system for Large Language Models using constrained decoding. 
 Given a natural language prompt like "What is the sum of 40 and 2?", the system identifies the correct function to call and extracts its arguments as structured JSON — guaranteed to be valid every time.
-**The core challenge**: a 0.6B parameter model (Qwen3-0.6B) left to its own devices produces valid JSON maybe 30% of the time. With constrained decoding — intervening at the logit level to mask out invalid tokens before each selection step — we reach 100% schema-compliant output.
+**The core challenge**: a 0.6B parameter model (Qwen3-0.6B) left to its own devices produces valid JSON maybe 30% of the time. With **constrained decoding** — intervening at the logit level to mask out invalid tokens before each selection step — we reach 100% schema-compliant output.
 
 #### Algorithm Explanation
 At each generation step, the model outputs logits (raw scores) over its entire vocabulary. Instead of just picking the highest score, we:
@@ -22,15 +22,16 @@ This enforces both syntactic JSON validity and semantic schema compliance — th
 
 Function calling enables LLMs to:
 
-• Interact with external systems: Call APIs, query databases, control devices
+• **Interact with external systems**: Call APIs, query databases, control devices
 
-• Execute code: Perform calculations, data transformations, file operations
+• **Execute code**: Perform calculations, data transformations, file operations
 
-• Chain operations: Break complex tasks into executable steps
+• **Chain operations**: Break complex tasks into executable steps
 
-• Provide structured output: Generate JSON, XML, or other machine-readable
+• **Provide structured output**: Generate JSON, XML, or other machine-readable
 formats
-• Extract structured data from unstructured text: For example, given a large
+
+• **Extract structured data from unstructured text**: For example, given a large
 book, extract fields such as {protagonist name, protagonist sex, protagonist
 age}
 
