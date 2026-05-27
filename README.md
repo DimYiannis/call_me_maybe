@@ -2,7 +2,8 @@
 
 
 # call me maybe — Function Calling in LLMs
-
+Function calling tool that translates natural language
+prompts into structured function calls
 ## Description
 This project implements a function calling system for Large Language Models using constrained decoding. 
 Given a natural language prompt like "What is the sum of 40 and 2?", the system identifies the correct function to call and extracts its arguments as structured JSON — guaranteed to be valid every time.
