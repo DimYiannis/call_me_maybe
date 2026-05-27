@@ -1,0 +1,1 @@
+"""output is schema-compliant DURING generation"""

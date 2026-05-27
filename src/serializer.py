@@ -1,0 +1,1 @@
+"""take the pydantic models and serialize them int json structure"""
