@@ -1,3 +1,4 @@
+""" define data shapes with pydantic"""
 from pydantic import BaseModel
 from typing import Any
 

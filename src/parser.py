@@ -1,4 +1,4 @@
-"""load/save the json files"""
+"""read json files"""
 
 def load_functions():
     """reads and validates functions_definition.json"""
