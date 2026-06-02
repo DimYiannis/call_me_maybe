@@ -1,24 +1,43 @@
+"""Entry point for call_me_maybe."""
 import argparse
-
-parser = arg.parse.ArgumentParser()
-
-parser.add_argument("--functions_definition", required=True)
-parser.add_argument("--input", required=True)
-parser.add_argument("--output", required=True)
-parser.add_argument("--visual", required=True)
-
-args = parser.parse_args()
+import sys
 
 
 def main() -> None:
+    """Parse args, load data, run constrained decoding pipeline."""
+    parser = argparse.ArgumentParser(
+        description="LLM function calling via constrained decoding"
+    )
+    parser.add_argument(
+        "--functions_definition",
+        default="data/input/functions_definition.json",
+    )
+    parser.add_argument(
+        "--input",
+        default="data/input/function_calling_tests.json",
+    )
+    parser.add_argument(
+        "--output",
+        default="data/output/function_calls.json",
+    )
+    parser.add_argument(
+        "--visual",
+        action="store_true",
+    )
+    args = parser.parse_args()
+
     try:
-        from llm_sdk import Small_LLM_Model
+        from llm_sdk import Small_LLM_Model  # noqa: F401
     except ImportError:
-        print(
-            "Error: llm_sdk not found."
-                "copy llm_sdk folder in the root of the project")
+        print("Error: llm_sdk not found. Copy llm_sdk folder to project root.")
         sys.exit(1)
-    funcs_def = args[0]
-    input_path = args[1]
-    output_path = args[2]
-    
+
+    funcs_def_path = args.functions_definition
+    input_path = args.input
+    output_path = args.output
+    visual = args.visual
+
+
+
+if __name__ == "__main__":
+    main()
