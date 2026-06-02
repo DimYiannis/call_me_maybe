@@ -1,11 +1,15 @@
-"""read json files"""
+"""Read and validate JSON input files into pydantic models."""
 import json
 import os
-from models import FunctionDefinition, TestPrompt
+from typing import Any
 
-def load_functions(filename:str) -> list[FunctionDefinition]:
+from .models import FunctionDefinition, TestPrompt
+
+
+def load_functions(filename: str) -> list[FunctionDefinition]:
     """
-    reads and validates functions_definition.json
+    Read and validate functions_definition.json.
+
     Args:
         filename: Path to the JSON file containing function definitions.
 
@@ -17,35 +21,38 @@ def load_functions(filename:str) -> list[FunctionDefinition]:
         ValueError: If the file contains invalid JSON.
     """
     if not os.path.exists(filename):
-        raise FileNotFoundError(f"file with functions {filename} not found")
+        raise FileNotFoundError(f"Functions file {filename} not found.")
     with open(filename, 'r') as f:
         try:
             data: list[Any] = json.load(f)
         except json.JSONDecodeError as e:
             raise ValueError(
-                f"Function file {filename} contains invalid JSON: {e}"
+                f"Functions file {filename} contains invalid JSON: {e}"
             )
     return [FunctionDefinition(**item) for item in data]
 
 
-def load_prompts(filename:str) -> list[InputPrompts]:
+def load_prompts(filename: str) -> list[TestPrompt]:
     """
-    reads and validates function_calling_tests.json
+    Read and validate function_calling_tests.json.
+
     Args:
         filename: Path to the JSON file containing prompts.
 
     Returns:
-        List of InputPrompts objects parsed from the file.
+        List of TestPrompt objects parsed from the file.
 
     Raises:
         FileNotFoundError: If the file does not exist.
         ValueError: If the file contains invalid JSON.
     """
     if not os.path.exists(filename):
-        raise FileNotFoundError(f" prompts file {filename} was not found")
+        raise FileNotFoundError(f"Prompts file {filename} not found.")
     with open(filename, "r") as f:
         try:
             data: list[Any] = json.load(f)
         except json.JSONDecodeError as e:
-            raise ValueError(f"prompt file {filename} is not in a valid json format {e}")
-    return [InputPrompts(**item) for item in data]
+            raise ValueError(
+                f"Prompts file {filename} contains invalid JSON: {e}"
+            )
+    return [TestPrompt(**item) for item in data]
