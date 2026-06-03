@@ -1,6 +1,9 @@
 """Load and index the model vocabulary for token-level constraint lookups."""
 import json
-from llm_sdk import Small_LLM_Model
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from llm_sdk import Small_LLM_Model
 
 
 class Vocabulary:
@@ -11,7 +14,7 @@ class Vocabulary:
     by the JSON state machine during constrained decoding.
     """
 
-    def __init__(self, model: Small_LLM_Model) -> None:
+    def __init__(self, model: "Small_LLM_Model") -> None:
         """
         Load vocabulary from the model's vocab.json file.
 
@@ -30,6 +33,18 @@ class Vocabulary:
     def size(self) -> int:
         """Return number of tokens in the vocabulary."""
         return len(self._token_to_id)
+
+    def items(self) -> list[tuple[str, int]]:
+        """
+        Return all (token_string, token_id) pairs.
+
+        Used by the constraint layer to scan the full vocabulary when
+        deciding which tokens are valid at a generation step.
+
+        Returns:
+            List of (token, id) tuples.
+        """
+        return list(self._token_to_id.items())
 
     def get_token(self, token_id: int) -> str:
         """
