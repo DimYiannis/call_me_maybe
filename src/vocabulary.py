@@ -75,34 +75,3 @@ class Vocabulary:
             KeyError: If token not in vocabulary.
         """
         return self._token_to_id[token]
-
-    def ids_with_prefix(self, prefix: str) -> list[int]:
-        """
-        Return all token ids whose string starts with prefix.
-
-        Used by the constraint layer to find valid continuations
-        when partially through a multi-token string (e.g. function name).
-
-        Args:
-            prefix: String prefix to match against.
-
-        Returns:
-            List of token ids that start with prefix.
-        """
-        return [
-            tid for token, tid in self._token_to_id.items()
-            if token.startswith(prefix)
-        ]
-
-    def ids_for_exact(self, text: str) -> list[int]:
-        """
-        Return all token ids that exactly match text.
-
-        Args:
-            text: Exact string to match.
-
-        Returns:
-            List of matching token ids (usually one).
-        """
-        tid = self._token_to_id.get(text)
-        return [tid] if tid is not None else []
