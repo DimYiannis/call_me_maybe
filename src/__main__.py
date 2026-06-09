@@ -24,6 +24,10 @@ def main() -> None:
         "--visual",
         action="store_true",
     )
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+    )
     args = parser.parse_args()
 
     try:
@@ -47,7 +51,7 @@ def main() -> None:
     for test_prompt in prompts:
         if args.visual:
             print(f"Processing: {test_prompt.prompt}")
-        result = decode(test_prompt, functions, model, vocab)
+        result = decode(test_prompt, functions, model, vocab, debug=args.debug)
         if args.visual:
             print(f"  -> {result.name}({result.parameters})")
         results.append(result)
