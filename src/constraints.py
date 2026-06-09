@@ -63,7 +63,7 @@ class Constraint:
         for func in functions:
             self._programs[func.name] = self._build_suffix(func)
 
-        self._alphabet: list[str] = [chr(c) for c in range(0x21, 0x7F)]
+        self._alphabet: list[str] = [chr(c) for c in range(0x20, 0x7F)]
 
         # mutable parse state
         self._program_id: str = "prefix"
@@ -121,7 +121,7 @@ class Constraint:
     @staticmethod
     def _is_str_char(ch: str) -> bool:
         """Return True if ch is allowed inside a string value."""
-        return 0x21 <= ord(ch) <= 0x7E and ch not in ('"', "\\")
+        return 0x20 <= ord(ch) <= 0x7E and ch not in ('"', "\\")
 
     def _value_step(self, kind: str, term: str, ch: str) -> str:
         """
@@ -202,7 +202,7 @@ class Constraint:
         return "reject"
 
     def _string_step(self, st: str, term: str, ch: str) -> str:
-        """String grammar: "chars" (no spaces, no escapes)."""
+        """String grammar: "chars" (spaces allowed via Ġ normalization)."""
         if st == "":
             if ch == '"':
                 self._val_state = "open"
@@ -333,11 +333,16 @@ class Constraint:
             self._restore(snap)
         return result
 
+    @staticmethod
+    def _normalize(token: str) -> str:
+        """Replace BPE space prefix Ġ with a literal space character."""
+        return token.replace("Ġ", " ")
+
     def _can_consume(self, token: str) -> bool:
         """Return True if every char of token is acceptable in sequence."""
         snap = self._snapshot()
         ok = True
-        for ch in token:
+        for ch in self._normalize(token):
             if not self._step(ch):
                 ok = False
                 break
@@ -364,7 +369,10 @@ class Constraint:
             return []
         ids: list[int] = []
         for token, tid in self._vocab.items():
-            if not token or token[0] not in first:
+            if not token:
+                continue
+            normalized = self._normalize(token)
+            if not normalized or normalized[0] not in first:
                 continue
             if self._can_consume(token):
                 ids.append(tid)
@@ -378,5 +386,5 @@ class Constraint:
             token_id: The token id selected by the decoder. Assumed to
                 be one returned by valid_next_ids.
         """
-        for ch in self._vocab.get_token(token_id):
+        for ch in self._normalize(self._vocab.get_token(token_id)):
             self._step(ch)
