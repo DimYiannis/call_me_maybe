@@ -97,6 +97,8 @@ Function selection via the LLM — no keyword matching or heuristics; the model 
 Vocabulary JSON used to map token IDs to strings, enabling token-level constraint checking
 Greedy decoding for constrained steps — since invalid tokens are already masked, temperature/sampling adds noise without benefit
 
+**Fully static constrained decoding with runtime-selected branches** — Static grammars, dynamically selected. All argument grammars are compiled ahead of time, one per function. The active grammar is selected at inference time by the model's own function-name choice — the constraint program for the argument phase is not determined until the model commits to a name. Generation is fully constrained throughout; no phase is left unconstrained.
+
 Performance Analysis
 MetricResult JSON validity 100% (guaranteed by design) Function selection accuracy~90%+Processing speed < 5 min for standard test sets
 **The reliability comes entirely from structural guidance, not model size.**
@@ -113,11 +115,87 @@ Tested edge cases: empty strings, large numbers, special characters, ambiguous p
 Swapped in custom functions_definition.json files with different function sets to verify generalization
 Verified mypy and flake8 pass cleanly
 
+## Theoretical Basis
+
+This project implements the approach described in:
+
+> **Efficient Guided Generation for Large Language Models**
+> Brandon T. Willard, Rémi Louf (2023)
+> [arXiv:2307.09702](https://arxiv.org/abs/2307.09702)
+
+The paper formalises constrained decoding as transitions through a finite-state machine (FSM). At each generation step, the FSM determines which vocabulary tokens are valid continuations; all others are masked to -inf before token selection. Key properties we inherit from this approach:
+
+- **100% structural validity** — invalid JSON is impossible by construction, not by prompt
+- **Model-agnostic** — works with any LLM that exposes per-step logits
+- **Negligible overhead** — vocabulary indexing is done once at startup; per-step masking is O(vocab_size)
+- **Schema compliance** — the FSM enforces not just JSON syntax but the specific function name and argument types
+
+---
+
+> **Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding**
+> Zhang et al. (2023) · [arXiv:2310.07075](https://arxiv.org/abs/2310.07075)
+
+### Core argument
+
+Syntax constraints are only learned **implicitly** during fine-tuning — models still make frequent syntax errors. Enforcing constraints **explicitly at decode time** via finite state machines is more reliable and requires no expensive fine-tuning.
+
+### System: TOOLDEC
+
+A constrained decoding algorithm using FSMs to enforce tool syntax compliance. Works on top of instruction-tuned LLMs without modifying weights.
+
+### Key result
+
+Mistral-Instruct: tool use accuracy **0% → 52%** with constrained decoding. Zero syntax errors across all tested models and benchmarks.
+
+### Key insight
+
+> "Syntax constraints are better enforced explicitly during decoding than implicitly during training."
+
+This is the direct theoretical backing for this project's approach. We don't fine-tune Qwen3-0.6B on JSON examples and hope it learns the format. We enforce the format structurally at every token step.
+
+### Connection to Willard & Louf (2023)
+
+Willard & Louf provide the FSM-based vocabulary indexing mechanism. Zhang et al. apply the same principle specifically to tool/function calling and make the empirical case against fine-tuning.
+
+---
+
+> **Thinking Before Constraining: A Unified Decoding Framework**
+> Nguyen et al. (2025) · [arXiv:2601.07525](https://arxiv.org/abs/2601.07525)
+
+### Core idea: In-Writing
+
+Hybrid decoding that decouples reasoning from formatting. The model generates unconstrained free-form reasoning, then a trigger token switches on structured constrained decoding for the output field.
+
+### The problem it solves
+
+Applying constraints too early interrupts the model's reasoning ("premature triggering"). Fully unconstrained output lacks verifiable structure. In-Writing threads the needle: reason freely, then enforce format.
+
+### Key result
+
+Up to **27% accuracy improvement** over purely natural generation on classification and reasoning tasks.
+
+### Connection to this project
+
+Points to a natural extension: instead of constraining the entire output from token one, allow the model to reason first:
+
+```json
+{
+  "reasoning": "<unconstrained — model thinks freely>",
+  "function_call": { "name": "<constrained>", "parameters": { "<constrained>" } }
+}
+```
+
+Current implementation constrains from the first token. In-Writing suggests reasoning-before-committing could improve function selection accuracy further, especially on ambiguous prompts.
+
+## Complexity Insight
+
+Prior approaches (e.g. Guidance) matched from sequence start and scanned the full vocabulary at every step — O(N) per token. Outlines amortizes all computation to preprocessing → O(1) at inference.
+
 ## Resources
 
 Qwen3 model — HuggingFace
 
-Constrained decoding — outline by the Outlines library
+Willard & Louf (2023) — [Efficient Guided Generation for Large Language Models](https://arxiv.org/abs/2307.09702)
 
 JSON Schema specification
 
