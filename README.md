@@ -197,7 +197,15 @@ Qwen3 model — HuggingFace
 
 Willard & Louf (2023) — [Efficient Guided Generation for Large Language Models](https://arxiv.org/abs/2307.09702)
 
-JSON Schema specification
+Nguyen et al. (2025) - [Thinking Before Constraining: A Unified Decoding Framework](https://arxiv.org/abs/2601.07525)
+
+Zhang et al. (2023) - [Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding](https://arxiv.org/abs/2310.07075)
+
+[Let's Build the GPT Tokenizer — Andrej Karpathy](https://www.fast.ai/posts/2025-10-16-karpathy-tokenizers.html)
+
+[A visual introduction to tokenization in LLMs — BPE Algorithm](https://www.youtube.com/watch?v=APnKbi448O4)
+
+[Tool Calling Explained: Turn Your LLM into an AI Agent](https://www.youtube.com/watch?v=KJf7SqPCRXg)
 
 Pydantic docs
 
