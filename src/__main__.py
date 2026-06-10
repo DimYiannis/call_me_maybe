@@ -40,6 +40,7 @@ def main() -> None:
     from .serializer import save_results
     from .vocabulary import Vocabulary
     from .decoder import decode
+    from .executor import execute
 
     functions = load_functions(args.functions_definition)
     prompts = load_prompts(args.input)
@@ -54,6 +55,7 @@ def main() -> None:
         result = decode(test_prompt, functions, model, vocab, debug=args.debug)
         if args.visual:
             print(f"  -> {result.name}({result.parameters})")
+            print(f"     result: {execute(result)}")
         results.append(result)
 
     save_results(results, args.output)
