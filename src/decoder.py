@@ -131,8 +131,12 @@ def decode(
     """
     Run constrained decoding for one prompt and return the function call.
 
-    At each step: get logits, mask invalid token ids to -inf, pick argmax,
-    advance constraint state, repeat until constraint is satisfied.
+    At each step: 
+        get logits, 
+        mask invalid token ids to -inf, 
+        pick argmax,
+        advance constraint state, 
+    repeat until constraint is satisfied.
 
     Args:
         prompt: Test prompt to process.
@@ -160,7 +164,9 @@ def decode(
         if constraint.is_complete():
             break
 
+        #get all the logits
         logits: list[float] = model.get_logits_from_input_ids(input_ids)
+        # return list of tokens that constraint allows
         valid_ids = constraint.valid_next_ids()
 
         if not valid_ids:
@@ -168,12 +174,14 @@ def decode(
                 "No valid tokens available — constraint/vocab mismatch."
             )
 
+        # hash table for hash lookup 0(1) instead of  O(n)
         valid_set = set(valid_ids)
+        # logit masking
         masked: list[float] = [
             logit if i in valid_set else float("-inf")
             for i, logit in enumerate(logits)
         ]
-
+        # pick token id with highest masked logit
         next_id = int(max(range(len(masked)), key=lambda i: masked[i]))
 
         if debug:
@@ -188,5 +196,7 @@ def decode(
             f"max_tokens ({max_tokens}) reached before generation completed."
         )
 
+    # tokens id back to string
     generated_text = model.decode(generated_ids)
+    # parse string to FunctionCall and return the object
     return _parse_output(generated_text, prompt.prompt)

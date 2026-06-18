@@ -108,6 +108,15 @@ Subword tokenization: function names and JSON structure tokens often span multip
 Parse state tracking: maintaining a lightweight JSON state machine that knows what's valid at each position without fully parsing incomplete JSON
 Type coercion: numbers in prompts may appear as integers but must be output as floats per the schema
 
+## Known Limitations
+
+These are model-size limitations — the constraint layer is correct, but a 0.6B model lacks the reasoning capacity to handle them reliably:
+
+- **Word-number parsing**: "three hundred and forty two" may be parsed as 342 (one number) instead of 300 + 42. English "and" in numbers is ambiguous — the model reads it as a single number, which is technically correct English.
+- **Regex escaping**: model does not reliably emit `\.` to match a literal dot — it defaults to `.` (any char). The constraint allows `\` inside strings, but the model never chooses to use it.
+- **Names with apostrophes**: `O'Brien` → model produces empty string. Apostrophe is allowed by the constraint; the model simply fails to extract the name correctly.
+- **No matching function**: when the prompt implies an operation with no corresponding function (e.g. "subtract"), the constraint forces a valid function name — the model picks the closest match, which may be semantically wrong. This is by design: the grammar guarantees structural validity, not semantic correctness.
+
 **Testing Strategy**
 
 Ran against the provided example inputs to verify basic correctness
