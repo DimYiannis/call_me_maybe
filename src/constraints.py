@@ -10,10 +10,9 @@ The machine produces COMPACT JSON (no whitespace) of the form:
     {"name":"<fn>","parameters":{"<arg>":<value>,...}}
 
 Compact output means each vocabulary key equals its literal characters
-for every token we accept, so no byte-level decoding is needed.
+for every token we accept, so no byte-level decoding is needed (space-fixed ).
 
-Approach
---------
+Approach:
 The expected output is a sequence of "instructions":
   - ('lit', s)            emit the fixed string s exactly
   - ('name',)             emit a function name (model's choice of a
@@ -22,7 +21,7 @@ The expected output is a sequence of "instructions":
                           following literal's first char `term` appears
 
 A character-level acceptor advances through these instructions. A token
-(possibly several characters) is valid iff every one of its characters
+(possibly several characters) is valid if every one of its characters
 can be consumed from the current state.
 """
 from .models import FunctionDefinition
@@ -49,9 +48,25 @@ class Constraint:
         """
         Build the per-function output programs.
 
-        Args:
+        args:
             functions: Known function definitions (the schema).
             vocab: Loaded model vocabulary.
+
+        result:
+            example:
+            "prefix": [
+                ("lit", '{"name":"'),
+                ("name",),
+            ]
+
+            then _build_suffix is called and result is like:
+
+            "fn_greet": [
+                ("lit", ',"parameters":{'),
+                ("lit", '"name":'),
+                ("value", "string", "}"),
+                ("lit", "}}"),
+            ]
         """
         self._vocab = vocab
         self._names: list[str] = [f.name for f in functions]
@@ -63,7 +78,7 @@ class Constraint:
         for func in functions:
             self._programs[func.name] = self._build_suffix(func)
 
-        self._alphabet: list[str] = [chr(c) for c in range(0x20, 0x7F)]
+        self._alphabet: list[str] = [chr(c) for c in range(32, 127)]
 
         # mutable parse state
         self._program_id: str = "prefix"
@@ -74,11 +89,14 @@ class Constraint:
         self._val_index: int = -1
         self._done: bool = False
 
-    # -- program construction ------------------------------------------
+    # program construction
 
     @staticmethod
     def _kind(type_str: str) -> str:
-        """Map a schema type string to an internal value kind."""
+        """
+            normalise for right type of grammar
+            map a schema type string to an internal value kind.
+        """
         t = type_str.lower()
         if t in ("number", "float"):
             return "number"
@@ -93,13 +111,17 @@ class Constraint:
         func: FunctionDefinition,
     ) -> list[Instruction]:
         """
-        Build the instruction list emitted after the function name.
+        build the instruction list emitted after the function name.
 
-        Args:
-            func: The selected function definition.
-
-        Returns:
+        returns:
             Instruction list for everything after the name's quote.
+            example:
+            seq = [
+                ("lit", ',"parameters":{"'),
+                ("lit", '"name":'),
+                ("value", "string", "}"),
+                ("lit", "}}"),
+            ]
         """
         params = list(func.parameters.items())
         n = len(params)
@@ -116,38 +138,38 @@ class Constraint:
         seq.append(("lit", "}}"))
         return seq
 
-    # -- value sub-machine ---------------------------------------------
+    # value sub-machine
 
     @staticmethod
     def _is_str_char(ch: str) -> bool:
         """Return True if ch is allowed inside a string value."""
-        return 0x20 <= ord(ch) <= 0x7E and ch not in ('"', "\\")
+        return 32 <= ord(ch) <= 126 and ch not in ('"', "\\")
 
     def _value_step(self, kind: str, term: str, ch: str) -> str:
         """
-        Advance the active value sub-machine by one char.
+        advance the active value sub-machine by one char.
 
-        Args:
+        args:
             kind: Value kind (number/integer/string/boolean).
             term: Char that terminates the value (start of next literal).
             ch: Candidate character.
 
-        Returns:
+        returns:
             'consumed', 'exit' (value done, ch belongs to next
             instruction), or 'reject'.
         """
-        st = self._val_state
+        state = self._val_state
         if kind == "number":
-            return self._number_step(st, term, ch)
+            return self._number_step(state, term, ch)
         if kind == "integer":
-            return self._integer_step(st, term, ch)
+            return self._integer_step(state, term, ch)
         if kind == "string":
-            return self._string_step(st, term, ch)
-        return self._boolean_step(st, term, ch)
+            return self._string_step(state, term, ch)
+        return self._boolean_step(state, term, ch)
 
-    def _number_step(self, st: str, term: str, ch: str) -> str:
+    def _number_step(self, state: str, term: str, ch: str) -> str:
         """Float grammar: -?digits.digits (forces float output)."""
-        if st == "":
+        if state == "":
             if ch == "-":
                 self._val_state = "sign"
                 return "consumed"
@@ -155,33 +177,33 @@ class Constraint:
                 self._val_state = "int"
                 return "consumed"
             return "reject"
-        if st == "sign":
+        if state == "sign":
             if ch.isdigit():
                 self._val_state = "int"
                 return "consumed"
             return "reject"
-        if st == "int":
+        if state == "int":
             if ch.isdigit():
                 return "consumed"
             if ch == ".":
                 self._val_state = "dot"
                 return "consumed"
             return "reject"
-        if st == "dot":
+        if state == "dot":
             if ch.isdigit():
                 self._val_state = "frac"
                 return "consumed"
             return "reject"
-        # st == "frac"
+        # state == "frac"
         if ch.isdigit():
             return "consumed"
         if ch == term:
             return "exit"
         return "reject"
 
-    def _integer_step(self, st: str, term: str, ch: str) -> str:
+    def _integer_step(self, state: str, term: str, ch: str) -> str:
         """Integer grammar: -?digits."""
-        if st == "":
+        if state == "":
             if ch == "-":
                 self._val_state = "sign"
                 return "consumed"
@@ -189,49 +211,57 @@ class Constraint:
                 self._val_state = "int"
                 return "consumed"
             return "reject"
-        if st == "sign":
+        if state == "sign":
             if ch.isdigit():
                 self._val_state = "int"
                 return "consumed"
             return "reject"
-        # st == "int"
+        # state == "int"
         if ch.isdigit():
             return "consumed"
         if ch == term:
             return "exit"
         return "reject"
 
-    def _string_step(self, st: str, term: str, ch: str) -> str:
-        """String grammar: "chars" (spaces allowed via Ġ normalization)."""
-        if st == "":
+    def _string_step(self, state: str, term: str, ch: str) -> str:
+        """String grammar: "chars" with escape sequences and space support."""
+        if state == "":
             if ch == '"':
                 self._val_state = "open"
                 return "consumed"
             return "reject"
-        if st == "open":
+        if state == "open":
             if ch == '"':
                 self._val_state = "closed"
+                return "consumed"
+            if ch == "\\":
+                self._val_state = "escape"
                 return "consumed"
             if self._is_str_char(ch):
                 return "consumed"
             return "reject"
-        # st == "closed"
+        if state == "escape":
+            if ch in ('"', "\\", "/", "n", "t", "r", "b", "f", "."):
+                self._val_state = "open"
+                return "consumed"
+            return "reject"
+        # state == "closed"
         if ch == term:
             return "exit"
         return "reject"
 
-    def _boolean_step(self, st: str, term: str, ch: str) -> str:
+    def _boolean_step(self, state: str, term: str, ch: str) -> str:
         """Boolean grammar: true | false."""
         options = ("true", "false")
-        if st in options and ch == term:
+        if state in options and ch == term:
             return "exit"
-        cand = st + ch
+        cand = state + ch
         if any(o.startswith(cand) for o in options):
             self._val_state = cand
             return "consumed"
         return "reject"
 
-    # -- core stepping -------------------------------------------------
+    # core stepping
 
     def _step(self, ch: str) -> bool:
         """
@@ -297,7 +327,7 @@ class Constraint:
 
             return False
 
-    # -- snapshot / restore for non-mutating queries -------------------
+    # snapshot / restore for non-mutating queries
 
     def _snapshot(self) -> tuple:
         """Capture the mutable state for later restore."""
@@ -349,7 +379,7 @@ class Constraint:
         self._restore(snap)
         return ok
 
-    # -- public API ----------------------------------------------------
+    # public API
 
     def is_complete(self) -> bool:
         """Return True once a full valid JSON object has been emitted."""
