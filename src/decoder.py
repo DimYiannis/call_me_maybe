@@ -1,4 +1,5 @@
 """Constrained decoding loop: prompt → valid JSON function call."""
+
 import json
 from llm_sdk import Small_LLM_Model
 
@@ -89,8 +90,9 @@ def _print_logit_step(
     print(f"  Valid tokens: {len(valid_ids)} / {len(logits)}")
 
     top_before = sorted(
-        range(len(logits)), key=lambda i: logits[i], reverse=True
-    )[:top_n]
+        range(len(logits)), key=lambda i: logits[i], reverse=True)[
+        :top_n
+    ]
     print(f"  Top {top_n} BEFORE masking:")
     for i in top_before:
         marker = "✓" if i in set(valid_ids) else "✗"
@@ -131,11 +133,11 @@ def decode(
     """
     Run constrained decoding for one prompt and return the function call.
 
-    At each step: 
-        get logits, 
-        mask invalid token ids to -inf, 
+    At each step:
+        get logits,
+        mask invalid token ids to -inf,
         pick argmax,
-        advance constraint state, 
+        advance constraint state,
     repeat until constraint is satisfied.
 
     Args:
@@ -164,22 +166,21 @@ def decode(
         if constraint.is_complete():
             break
 
-        #get all the logits
+        # get all the logits
         logits: list[float] = model.get_logits_from_input_ids(input_ids)
         # return list of tokens that constraint allows
         valid_ids = constraint.valid_next_ids()
 
         if not valid_ids:
             raise ValueError(
-                "No valid tokens available — constraint/vocab mismatch."
-            )
+                "No valid tokens available — constraint/vocab mismatch.")
 
         # hash table for hash lookup 0(1) instead of  O(n)
         valid_set = set(valid_ids)
         # logit masking
         masked: list[float] = [
-            logit if i in valid_set else float("-inf")
-            for i, logit in enumerate(logits)
+            logit if i in valid_set
+            else float("-inf") for i, logit in enumerate(logits)
         ]
         # pick token id with highest masked logit
         next_id = int(max(range(len(masked)), key=lambda i: masked[i]))

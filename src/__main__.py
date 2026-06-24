@@ -44,8 +44,9 @@ def main() -> None:
     functions = load_functions(args.functions_definition)
     prompts = load_prompts(args.input)
 
-    model = Small_LLM_Model() 
-    #model_name="Qwen/Qwen3-1.7B" Qwen/Qwen2.5-1.5B-Instruct
+
+    model = Small_LLM_Model()
+    # model_name="Qwen/Qwen3-1.7B"
     vocab = Vocabulary(model)
 
     results = []
