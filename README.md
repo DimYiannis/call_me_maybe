@@ -60,6 +60,12 @@ uv run python -m src \
   --input data/input/function_calling_tests.json \
   --output data/output/function_calls.json
 ```
+## Visualize generation process (bonus)
+```
+uv run python -m src --visual --debug
+```
+Prints step-by-step logit masking at each generation step: valid token count, top tokens before/after masking, and the chosen token.
+
 ## Lint
 make lint
 
