@@ -32,7 +32,7 @@ def _build_prompt(
         args = ", ".join(
             f"{name}: {schema.type}"
             for name, schema in func.parameters.items()
-        )
+           )
         lines.append(f"- {func.name}({args}): {func.description}")
     lines += ["", f"User request: {prompt}", "", "JSON:"]
     return "\n".join(lines)

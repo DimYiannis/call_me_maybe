@@ -3,6 +3,8 @@ import json
 import os
 from typing import Any
 
+from pydantic import ValidationError
+
 from .models import FunctionDefinition, TestPrompt
 
 
@@ -29,7 +31,16 @@ def load_functions(filename: str) -> list[FunctionDefinition]:
             raise ValueError(
                 f"Functions file {filename} contains invalid JSON: {e}"
             )
-    return [FunctionDefinition(**item) for item in data]
+    if not isinstance(data, list):
+        raise ValueError(
+            f"Functions file {filename} must contain a JSON list."
+        )
+    try:
+        return [FunctionDefinition(**item) for item in data]
+    except ValidationError as e:
+        raise ValueError(
+            f"Functions file {filename} does not match schema: {e}"
+        )
 
 
 def load_prompts(filename: str) -> list[TestPrompt]:
@@ -55,4 +66,13 @@ def load_prompts(filename: str) -> list[TestPrompt]:
             raise ValueError(
                 f"Prompts file {filename} contains invalid JSON: {e}"
             )
-    return [TestPrompt(**item) for item in data]
+    if not isinstance(data, list):
+        raise ValueError(
+            f"Prompts file {filename} must contain a JSON list."
+        )
+    try:
+        return [TestPrompt(**item) for item in data]
+    except ValidationError as e:
+        raise ValueError(
+            f"Prompts file {filename} does not match schema: {e}"
+        )
