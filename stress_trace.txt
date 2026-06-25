@@ -1,0 +1,2962 @@
+Processing: add three hundred and forty two
+
+--- Step 0 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'Ġ{"'                logit=20.297
+    [✗] 'Ġ{Ċ'                logit=19.891
+    [✗] 'Ġ{'                 logit=19.703
+    [✗] 'ĠĊ'                 logit=17.859
+    [✗] 'ĠĊĊ'                logit=17.125
+  Top 5 AFTER masking:
+    '{"'                 logit=13.406
+    '{'                  logit=8.203
+  → Chosen: '{"'
+
+--- Step 1 ---
+  Valid tokens: 4 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'result'             logit=19.203
+    [✗] 'response'           logit=19.109
+    [✗] 'function'           logit=18.531
+    [✗] 'user'               logit=17.797
+    [✗] 'output'             logit=17.578
+  Top 5 AFTER masking:
+    'name'               logit=15.102
+    'n'                  logit=11.305
+    'na'                 logit=7.434
+    'nam'                logit=6.426
+  → Chosen: 'name'
+
+--- Step 2 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":"'                logit=24.125
+    [✓] '":'                 logit=23.438
+    [✗] '":"","'             logit=18.547
+    [✗] '_of'                logit=17.531
+    [✗] '","'                logit=16.938
+  Top 5 AFTER masking:
+    '":"'                logit=24.125
+    '":'                 logit=23.438
+    '"'                  logit=16.375
+  → Chosen: '":"'
+
+--- Step 3 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'user'               logit=18.188
+    [✗] 'User'               logit=17.094
+    [✗] 'John'               logit=15.414
+    [✗] 'test'               logit=15.109
+    [✗] 'j'                  logit=14.586
+  Top 5 AFTER masking:
+    'f'                  logit=12.836
+    'fn'                 logit=9.852
+  → Chosen: 'f'
+
+--- Step 4 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'ro'                 logit=15.914
+    [✗] '1'                  logit=15.711
+    [✗] 'iona'               logit=15.219
+    [✗] 'uj'                 logit=15.094
+    [✗] '3'                  logit=14.906
+  Top 5 AFTER masking:
+    'n'                  logit=-6.312
+  → Chosen: 'n'
+
+--- Step 5 ---
+  Valid tokens: 16 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_add'               logit=24.266
+    [✓] '_sub'               logit=20.172
+    [✓] '_g'                 logit=19.406
+    [✓] '_get'               logit=18.500
+    [✓] '_reverse'           logit=15.727
+  Top 5 AFTER masking:
+    '_add'               logit=24.266
+    '_sub'               logit=20.172
+    '_g'                 logit=19.406
+    '_get'               logit=18.500
+    '_reverse'           logit=15.727
+  → Chosen: '_add'
+
+--- Step 6 ---
+  Valid tokens: 5 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_numbers'           logit=29.844
+    [✗] '_two'               logit=20.328
+    [✗] '","'                logit=19.453
+    [✗] '_three'             logit=18.953
+    [✗] '",Ċ'                logit=18.812
+  Top 5 AFTER masking:
+    '_numbers'           logit=29.844
+    '_number'            logit=17.984
+    '_'                  logit=17.469
+    '_num'               logit=15.273
+    '_n'                 logit=14.195
+  → Chosen: '_numbers'
+
+--- Step 7 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '","'                logit=25.234
+    [✓] '",'                 logit=21.516
+    [✗] '",Ċ'                logit=19.344
+    [✗] '"}'                 logit=17.297
+    [✗] '"},{"'              logit=16.797
+  Top 5 AFTER masking:
+    '","'                logit=25.234
+    '",'                 logit=21.516
+    '"'                  logit=16.062
+  → Chosen: '","'
+
+--- Step 8 ---
+  Valid tokens: 7 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'arguments'          logit=23.938
+    [✗] 'args'               logit=21.266
+    [✗] 'function'           logit=20.766
+    [✓] 'parameters'         logit=20.734
+    [✗] 'argument'           logit=18.703
+  Top 5 AFTER masking:
+    'parameters'         logit=20.734
+    'parameter'          logit=16.594
+    'param'              logit=15.906
+    'para'               logit=12.531
+    'p'                  logit=11.164
+  → Chosen: 'parameters'
+
+--- Step 9 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":{"'               logit=27.188
+    [✓] '":'                 logit=25.203
+    [✗] '":"'                logit=24.203
+    [✗] '":["'               logit=22.375
+    [✗] '":[{"'              logit=21.797
+  Top 5 AFTER masking:
+    '":{"'               logit=27.188
+    '":'                 logit=25.203
+    '"'                  logit=17.391
+  → Chosen: '":{"'
+
+--- Step 10 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'a'                  logit=25.031
+    [✗] 'arguments'          logit=17.672
+    [✗] 'numbers'            logit=17.625
+    [✗] 'b'                  logit=17.078
+    [✗] 'number'             logit=16.906
+  Top 5 AFTER masking:
+    'a'                  logit=25.031
+  → Chosen: 'a'
+
+--- Step 11 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":'                 logit=26.984
+    [✗] '":"'                logit=24.609
+    [✗] '":{"'               logit=20.562
+    [✗] '":['                logit=19.875
+    [✓] '":-'                logit=19.422
+  Top 5 AFTER masking:
+    '":'                 logit=26.984
+    '":-'                logit=19.422
+    '"'                  logit=16.750
+  → Chosen: '":'
+
+--- Step 12 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '3'                  logit=23.625
+    [✗] 'Ġ"'                 logit=20.656
+    [✓] '4'                  logit=20.469
+    [✓] '1'                  logit=20.172
+    [✓] '2'                  logit=20.125
+  Top 5 AFTER masking:
+    '3'                  logit=23.625
+    '4'                  logit=20.469
+    '1'                  logit=20.172
+    '2'                  logit=20.125
+    '5'                  logit=18.328
+  → Chosen: '3'
+
+--- Step 13 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '4'                  logit=25.453
+    [✓] '0'                  logit=22.422
+    [✓] '2'                  logit=18.656
+    [✓] '5'                  logit=18.188
+    [✓] '3'                  logit=18.172
+  Top 5 AFTER masking:
+    '4'                  logit=25.453
+    '0'                  logit=22.422
+    '2'                  logit=18.656
+    '5'                  logit=18.188
+    '3'                  logit=18.172
+  → Chosen: '4'
+
+--- Step 14 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '2'                  logit=25.734
+    [✓] '0'                  logit=20.359
+    [✓] '3'                  logit=17.719
+    [✓] '1'                  logit=16.828
+    [✓] '4'                  logit=16.641
+  Top 5 AFTER masking:
+    '2'                  logit=25.734
+    '0'                  logit=20.359
+    '3'                  logit=17.719
+    '1'                  logit=16.828
+    '4'                  logit=16.641
+  → Chosen: '2'
+
+--- Step 15 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✗] ',"'                 logit=23.625
+    [✗] ','                  logit=21.312
+    [✗] '}}Ċ'                logit=21.281
+    [✗] '}}'                 logit=19.453
+    [✗] '}}ĊĊ'               logit=18.594
+  Top 5 AFTER masking:
+    '.'                  logit=17.875
+    '0'                  logit=14.602
+    '1'                  logit=11.781
+    '4'                  logit=11.633
+    '2'                  logit=11.453
+  → Chosen: '.'
+
+--- Step 16 ---
+  Valid tokens: 10 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=23.656
+    [✓] '5'                  logit=19.344
+    [✓] '4'                  logit=18.266
+    [✓] '2'                  logit=17.703
+    [✓] '1'                  logit=17.219
+  Top 5 AFTER masking:
+    '0'                  logit=23.656
+    '5'                  logit=19.344
+    '4'                  logit=18.266
+    '2'                  logit=17.703
+    '1'                  logit=17.219
+  → Chosen: '0'
+
+--- Step 17 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✓] ',"'                 logit=23.797
+    [✓] '0'                  logit=21.797
+    [✓] ','                  logit=20.688
+    [✗] '}}Ċ'                logit=20.000
+    [✗] '}}'                 logit=18.156
+  Top 5 AFTER masking:
+    ',"'                 logit=23.797
+    '0'                  logit=21.797
+    ','                  logit=20.688
+    '1'                  logit=16.172
+    '2'                  logit=14.398
+  → Chosen: ',"'
+
+--- Step 18 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'b'                  logit=28.172
+    [✗] '"'                  logit=20.078
+    [✗] 'Ġb'                 logit=18.453
+    [✗] 'Ġ"'                 logit=16.609
+    [✗] 'required'           logit=16.516
+  Top 5 AFTER masking:
+    'b'                  logit=28.172
+  → Chosen: 'b'
+
+--- Step 19 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":'                 logit=26.156
+    [✗] '":"'                logit=19.625
+    [✓] '":-'                logit=17.344
+    [✗] '":""'               logit=16.750
+    [✗] '":{"'               logit=16.734
+  Top 5 AFTER masking:
+    '":'                 logit=26.156
+    '":-'                logit=17.344
+    '"'                  logit=15.359
+  → Chosen: '":'
+
+--- Step 20 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '1'                  logit=21.766
+    [✓] '0'                  logit=21.125
+    [✓] '2'                  logit=21.016
+    [✓] '4'                  logit=18.703
+    [✓] '3'                  logit=17.625
+  Top 5 AFTER masking:
+    '1'                  logit=21.766
+    '0'                  logit=21.125
+    '2'                  logit=21.016
+    '4'                  logit=18.703
+    '3'                  logit=17.625
+  → Chosen: '1'
+
+--- Step 21 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✗] '}}Ċ'                logit=21.344
+    [✗] '}}ĊĊ'               logit=20.750
+    [✓] '.'                  logit=20.703
+    [✓] '0'                  logit=20.031
+    [✗] '}}'                 logit=19.969
+  Top 5 AFTER masking:
+    '.'                  logit=20.703
+    '0'                  logit=20.031
+    '2'                  logit=18.438
+    '4'                  logit=16.531
+    '5'                  logit=15.711
+  → Chosen: '.'
+
+--- Step 22 ---
+  Valid tokens: 10 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=24.469
+    [✓] '5'                  logit=19.828
+    [✗] '}}Ċ'                logit=18.750
+    [✓] '2'                  logit=18.500
+    [✓] '4'                  logit=17.594
+  Top 5 AFTER masking:
+    '0'                  logit=24.469
+    '5'                  logit=19.828
+    '2'                  logit=18.500
+    '4'                  logit=17.594
+    '1'                  logit=17.516
+  → Chosen: '0'
+
+--- Step 23 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✗] '}}Ċ'                logit=22.312
+    [✗] '}}ĊĊ'               logit=21.547
+    [✗] ',"'                 logit=20.891
+    [✓] '}}'                 logit=20.016
+    [✗] '},"'                logit=18.203
+  Top 5 AFTER masking:
+    '}}'                 logit=20.016
+    '}'                  logit=17.938
+    '0'                  logit=16.672
+    '4'                  logit=12.656
+    '2'                  logit=12.320
+  → Chosen: '}}'
+  -> fn_add_numbers({'a': 342.0, 'b': 1.0})
+Processing: what is the square root of two hundred and fifty six?
+
+--- Step 0 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'Ġ{"'                logit=20.391
+    [✗] 'Ġ{Ċ'                logit=20.172
+    [✗] 'Ġ{'                 logit=19.406
+    [✗] 'ĠĊ'                 logit=18.406
+    [✗] 'ĠĊĊ'                logit=17.516
+  Top 5 AFTER masking:
+    '{"'                 logit=13.375
+    '{'                  logit=7.703
+  → Chosen: '{"'
+
+--- Step 1 ---
+  Valid tokens: 4 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'result'             logit=18.969
+    [✗] 'response'           logit=18.750
+    [✗] 'function'           logit=18.266
+    [✗] 'answer'             logit=17.938
+    [✗] 'user'               logit=17.922
+  Top 5 AFTER masking:
+    'name'               logit=14.945
+    'n'                  logit=10.945
+    'na'                 logit=7.148
+    'nam'                logit=6.121
+  → Chosen: 'name'
+
+--- Step 2 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":"'                logit=23.641
+    [✓] '":'                 logit=22.922
+    [✗] '":"","'             logit=18.641
+    [✗] '_of'                logit=18.125
+    [✗] '","'                logit=16.484
+  Top 5 AFTER masking:
+    '":"'                logit=23.641
+    '":'                 logit=22.922
+    '"'                  logit=16.000
+  → Chosen: '":"'
+
+--- Step 3 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'user'               logit=18.375
+    [✗] 'User'               logit=17.078
+    [✗] 'square'             logit=15.492
+    [✗] '","'                logit=15.328
+    [✗] 'the'                logit=15.117
+  Top 5 AFTER masking:
+    'f'                  logit=13.789
+    'fn'                 logit=11.055
+  → Chosen: 'f'
+
+--- Step 4 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✗] '","'                logit=16.219
+    [✗] 'uj'                 logit=15.922
+    [✗] 'user'               logit=15.789
+    [✗] 'unt'                logit=15.727
+    [✗] 'ro'                 logit=15.656
+  Top 5 AFTER masking:
+    'n'                  logit=-5.672
+  → Chosen: 'n'
+
+--- Step 5 ---
+  Valid tokens: 16 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_get'               logit=29.250
+    [✓] '_sub'               logit=21.656
+    [✓] '_add'               logit=20.203
+    [✓] '_g'                 logit=19.781
+    [✗] '","'                logit=18.922
+  Top 5 AFTER masking:
+    '_get'               logit=29.250
+    '_sub'               logit=21.656
+    '_add'               logit=20.203
+    '_g'                 logit=19.781
+    '_'                  logit=15.773
+  → Chosen: '_get'
+
+--- Step 6 ---
+  Valid tokens: 4 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_square'            logit=30.828
+    [✓] '_sq'                logit=21.750
+    [✗] '_squared'           logit=21.578
+    [✗] 'square'             logit=21.281
+    [✗] 'Square'             logit=20.609
+  Top 5 AFTER masking:
+    '_square'            logit=30.828
+    '_sq'                logit=21.750
+    '_'                  logit=18.250
+    '_s'                 logit=17.547
+  → Chosen: '_square'
+
+--- Step 7 ---
+  Valid tokens: 4 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_root'              logit=33.375
+    [✓] '_ro'                logit=21.172
+    [✗] '-root'              logit=20.641
+    [✗] 'Root'               logit=18.734
+    [✗] '_ROOT'              logit=18.078
+  Top 5 AFTER masking:
+    '_root'              logit=33.375
+    '_ro'                logit=21.172
+    '_'                  logit=16.734
+    '_r'                 logit=15.312
+  → Chosen: '_root'
+
+--- Step 8 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '","'                logit=25.797
+    [✓] '",'                 logit=22.469
+    [✗] '",Ċ'                logit=18.156
+    [✗] '"}'                 logit=17.328
+    [✗] '"}Ċ'                logit=16.750
+  Top 5 AFTER masking:
+    '","'                logit=25.797
+    '",'                 logit=22.469
+    '"'                  logit=16.125
+  → Chosen: '","'
+
+--- Step 9 ---
+  Valid tokens: 7 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'arguments'          logit=24.391
+    [✗] 'args'               logit=21.516
+    [✓] 'parameters'         logit=20.781
+    [✗] 'function'           logit=20.359
+    [✗] 'argument'           logit=19.062
+  Top 5 AFTER masking:
+    'parameters'         logit=20.781
+    'parameter'          logit=16.672
+    'param'              logit=15.664
+    'para'               logit=12.133
+    'p'                  logit=11.109
+  → Chosen: 'parameters'
+
+--- Step 10 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":{"'               logit=27.047
+    [✓] '":'                 logit=25.328
+    [✗] '":"'                logit=24.766
+    [✗] '":["'               logit=23.156
+    [✗] '":[{"'              logit=21.812
+  Top 5 AFTER masking:
+    '":{"'               logit=27.047
+    '":'                 logit=25.328
+    '"'                  logit=17.234
+  → Chosen: '":{"'
+
+--- Step 11 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'a'                  logit=24.219
+    [✗] 'arguments'          logit=18.594
+    [✗] 'input'              logit=18.281
+    [✗] 'value'              logit=18.156
+    [✗] 'number'             logit=18.000
+  Top 5 AFTER masking:
+    'a'                  logit=24.219
+  → Chosen: 'a'
+
+--- Step 12 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":'                 logit=27.828
+    [✗] '":"'                logit=25.562
+    [✗] '":{"'               logit=22.078
+    [✗] '":['                logit=20.484
+    [✗] '":["'               logit=19.250
+  Top 5 AFTER masking:
+    '":'                 logit=27.828
+    '":-'                logit=17.734
+    '"'                  logit=16.375
+  → Chosen: '":'
+
+--- Step 13 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '2'                  logit=24.234
+    [✓] '5'                  logit=21.234
+    [✗] 'Ġ"'                 logit=20.750
+    [✓] '1'                  logit=19.031
+    [✓] '3'                  logit=18.516
+  Top 5 AFTER masking:
+    '2'                  logit=24.234
+    '5'                  logit=21.234
+    '1'                  logit=19.031
+    '3'                  logit=18.516
+    '4'                  logit=18.000
+  → Chosen: '2'
+
+--- Step 14 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '5'                  logit=26.953
+    [✓] '0'                  logit=23.453
+    [✓] '2'                  logit=19.828
+    [✓] '4'                  logit=18.125
+    [✓] '3'                  logit=17.641
+  Top 5 AFTER masking:
+    '5'                  logit=26.953
+    '0'                  logit=23.453
+    '2'                  logit=19.828
+    '4'                  logit=18.125
+    '3'                  logit=17.641
+  → Chosen: '5'
+
+--- Step 15 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '6'                  logit=26.516
+    [✓] '0'                  logit=21.906
+    [✓] '5'                  logit=21.328
+    [✓] '7'                  logit=18.969
+    [✓] '8'                  logit=18.375
+  Top 5 AFTER masking:
+    '6'                  logit=26.516
+    '0'                  logit=21.906
+    '5'                  logit=21.328
+    '7'                  logit=18.969
+    '8'                  logit=18.375
+  → Chosen: '6'
+
+--- Step 16 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✗] '}}Ċ'                logit=24.609
+    [✗] ',"'                 logit=23.219
+    [✗] '}}'                 logit=21.375
+    [✗] '}}ĊĊ'               logit=21.281
+    [✗] ','                  logit=21.188
+  Top 5 AFTER masking:
+    '.'                  logit=19.578
+    '0'                  logit=15.156
+    '5'                  logit=11.492
+    '1'                  logit=11.422
+    '4'                  logit=10.992
+  → Chosen: '.'
+
+--- Step 17 ---
+  Valid tokens: 10 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=25.016
+    [✓] '5'                  logit=20.938
+    [✗] '}}Ċ'                logit=20.578
+    [✓] '4'                  logit=18.016
+    [✗] '}}ĊĊ'               logit=17.953
+  Top 5 AFTER masking:
+    '0'                  logit=25.016
+    '5'                  logit=20.938
+    '4'                  logit=18.016
+    '2'                  logit=17.828
+    '1'                  logit=17.797
+  → Chosen: '0'
+
+--- Step 18 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✗] '}}Ċ'                logit=22.328
+    [✗] ',"'                 logit=21.781
+    [✗] ','                  logit=20.453
+    [✗] '}}ĊĊ'               logit=20.422
+    [✓] '0'                  logit=20.250
+  Top 5 AFTER masking:
+    '0'                  logit=20.250
+    '}}'                 logit=19.406
+    '}'                  logit=17.250
+    '1'                  logit=14.984
+    '5'                  logit=13.336
+  → Chosen: '0'
+
+--- Step 19 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=23.484
+    [✗] '}}Ċ'                logit=21.344
+    [✗] ',"'                 logit=20.375
+    [✗] '}}ĊĊ'               logit=19.562
+    [✓] '}}'                 logit=19.156
+  Top 5 AFTER masking:
+    '0'                  logit=23.484
+    '}}'                 logit=19.156
+    '1'                  logit=17.422
+    '}'                  logit=15.992
+    '4'                  logit=15.625
+  → Chosen: '0'
+
+--- Step 20 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=23.531
+    [✗] '}}Ċ'                logit=21.141
+    [✗] ',"'                 logit=21.047
+    [✗] ','                  logit=19.797
+    [✗] '}}ĊĊ'               logit=19.609
+  Top 5 AFTER masking:
+    '0'                  logit=23.531
+    '}}'                 logit=18.922
+    '1'                  logit=18.750
+    '}'                  logit=16.234
+    '2'                  logit=15.375
+  → Chosen: '0'
+
+--- Step 21 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=23.391
+    [✓] '1'                  logit=20.438
+    [✗] '}}Ċ'                logit=20.172
+    [✗] ',"'                 logit=19.531
+    [✗] '}}ĊĊ'               logit=19.188
+  Top 5 AFTER masking:
+    '0'                  logit=23.391
+    '1'                  logit=20.438
+    '}}'                 logit=18.406
+    '2'                  logit=16.203
+    '}'                  logit=15.859
+  → Chosen: '0'
+
+--- Step 22 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=23.562
+    [✓] '1'                  logit=21.375
+    [✗] '}}Ċ'                logit=20.062
+    [✗] ',"'                 logit=19.016
+    [✗] '}}ĊĊ'               logit=18.781
+  Top 5 AFTER masking:
+    '0'                  logit=23.562
+    '1'                  logit=21.375
+    '}}'                 logit=18.609
+    '2'                  logit=16.562
+    '}'                  logit=16.078
+  → Chosen: '0'
+
+--- Step 23 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=21.125
+    [✗] '}}Ċ'                logit=20.953
+    [✗] ',"'                 logit=20.500
+    [✗] '}}ĊĊ'               logit=19.141
+    [✓] '}}'                 logit=19.109
+  Top 5 AFTER masking:
+    '0'                  logit=21.125
+    '}}'                 logit=19.109
+    '1'                  logit=18.641
+    '}'                  logit=16.453
+    '2'                  logit=14.469
+  → Chosen: '0'
+
+--- Step 24 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=22.641
+    [✗] '}}Ċ'                logit=21.453
+    [✗] ',"'                 logit=20.484
+    [✗] ','                  logit=19.734
+    [✗] '}}ĊĊ'               logit=19.359
+  Top 5 AFTER masking:
+    '0'                  logit=22.641
+    '}}'                 logit=19.266
+    '1'                  logit=19.125
+    '}'                  logit=16.484
+    '2'                  logit=14.844
+  → Chosen: '0'
+
+--- Step 25 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=23.609
+    [✓] '1'                  logit=21.250
+    [✗] '}}Ċ'                logit=19.641
+    [✗] ',"'                 logit=18.859
+    [✗] ','                  logit=18.281
+  Top 5 AFTER masking:
+    '0'                  logit=23.609
+    '1'                  logit=21.250
+    '}}'                 logit=17.734
+    '2'                  logit=16.422
+    '}'                  logit=15.406
+  → Chosen: '0'
+
+--- Step 26 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=23.375
+    [✓] '1'                  logit=20.859
+    [✗] '}}Ċ'                logit=19.891
+    [✗] ',"'                 logit=19.703
+    [✗] '"}}Ċ'               logit=18.562
+  Top 5 AFTER masking:
+    '0'                  logit=23.375
+    '1'                  logit=20.859
+    '}}'                 logit=18.047
+    '2'                  logit=15.922
+    '}'                  logit=15.484
+  → Chosen: '0'
+
+--- Step 27 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=23.750
+    [✓] '1'                  logit=20.688
+    [✗] '}}Ċ'                logit=19.047
+    [✗] ',"'                 logit=19.031
+    [✗] '"}}Ċ'               logit=18.188
+  Top 5 AFTER masking:
+    '0'                  logit=23.750
+    '1'                  logit=20.688
+    '}}'                 logit=17.516
+    '2'                  logit=16.578
+    '3'                  logit=15.906
+  → Chosen: '0'
+
+--- Step 28 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=23.859
+    [✓] '1'                  logit=21.969
+    [✗] '}}Ċ'                logit=18.422
+    [✗] '"}}Ċ'               logit=17.812
+    [✗] ',"'                 logit=17.750
+  Top 5 AFTER masking:
+    '0'                  logit=23.859
+    '1'                  logit=21.969
+    '2'                  logit=17.156
+    '}}'                 logit=16.812
+    '3'                  logit=16.125
+  → Chosen: '0'
+
+--- Step 29 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=23.141
+    [✓] '1'                  logit=21.828
+    [✗] ',"'                 logit=18.594
+    [✗] '}}Ċ'                logit=18.469
+    [✗] '"}}Ċ'               logit=17.906
+  Top 5 AFTER masking:
+    '0'                  logit=23.141
+    '1'                  logit=21.828
+    '2'                  logit=17.891
+    '3'                  logit=17.203
+    '}}'                 logit=17.031
+  → Chosen: '0'
+
+--- Step 30 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✓] '1'                  logit=22.344
+    [✓] '0'                  logit=21.109
+    [✓] '2'                  logit=19.094
+    [✓] '3'                  logit=18.781
+    [✓] '4'                  logit=17.656
+  Top 5 AFTER masking:
+    '1'                  logit=22.344
+    '0'                  logit=21.109
+    '2'                  logit=19.094
+    '3'                  logit=18.781
+    '4'                  logit=17.656
+  → Chosen: '1'
+
+--- Step 31 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✗] '}}Ċ'                logit=20.641
+    [✗] ',"'                 logit=20.359
+    [✗] '}}ĊĊ'               logit=19.125
+    [✗] '"}}Ċ'               logit=18.891
+    [✓] '}}'                 logit=18.828
+  Top 5 AFTER masking:
+    '}}'                 logit=18.828
+    '}'                  logit=17.375
+    '0'                  logit=16.344
+    '2'                  logit=15.078
+    '5'                  logit=14.305
+  → Chosen: '}}'
+  -> fn_get_square_root({'a': 256.0})
+Processing: I have 3 cats and 2 dogs. What is the sum of 100 and 250?
+
+--- Step 0 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'Ġ{"'                logit=20.984
+    [✗] 'Ġ{'                 logit=19.688
+    [✗] 'Ġ{Ċ'                logit=18.859
+    [✗] 'ĠĊ'                 logit=17.312
+    [✗] "Ġ{'"                logit=17.281
+  Top 5 AFTER masking:
+    '{"'                 logit=13.891
+    '{'                  logit=8.484
+  → Chosen: '{"'
+
+--- Step 1 ---
+  Valid tokens: 4 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'result'             logit=18.969
+    [✗] 'response'           logit=18.188
+    [✗] 'user'               logit=17.812
+    [✗] 'sum'                logit=17.797
+    [✗] 'answer'             logit=17.594
+  Top 5 AFTER masking:
+    'name'               logit=17.125
+    'n'                  logit=11.320
+    'nam'                logit=7.723
+    'na'                 logit=7.398
+  → Chosen: 'name'
+
+--- Step 2 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":"'                logit=23.375
+    [✓] '":'                 logit=22.984
+    [✗] '":"","'             logit=18.359
+    [✗] '_of'                logit=17.359
+    [✗] '","'                logit=16.812
+  Top 5 AFTER masking:
+    '":"'                logit=23.375
+    '":'                 logit=22.984
+    '"'                  logit=16.219
+  → Chosen: '":"'
+
+--- Step 3 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'user'               logit=17.203
+    [✗] 'User'               logit=16.609
+    [✗] 'John'               logit=15.586
+    [✗] 'cat'                logit=15.547
+    [✗] 'C'                  logit=15.523
+  Top 5 AFTER masking:
+    'f'                  logit=12.891
+    'fn'                 logit=8.203
+  → Chosen: 'f'
+
+--- Step 4 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'ro'                 logit=17.031
+    [✗] 'eline'              logit=16.500
+    [✗] '1'                  logit=16.062
+    [✗] 'edor'               logit=15.203
+    [✗] 'iona'               logit=15.195
+  Top 5 AFTER masking:
+    'n'                  logit=-8.023
+  → Chosen: 'n'
+
+--- Step 5 ---
+  Valid tokens: 16 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_add'               logit=23.859
+    [✓] '_sub'               logit=21.328
+    [✓] '_g'                 logit=19.547
+    [✓] '_get'               logit=19.203
+    [✗] '_sum'               logit=16.766
+  Top 5 AFTER masking:
+    '_add'               logit=23.859
+    '_sub'               logit=21.328
+    '_g'                 logit=19.547
+    '_get'               logit=19.203
+    '_'                  logit=14.570
+  → Chosen: '_add'
+
+--- Step 6 ---
+  Valid tokens: 5 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_numbers'           logit=31.297
+    [✗] '_two'               logit=20.281
+    [✗] '",Ċ'                logit=19.219
+    [✗] '","'                logit=18.766
+    [✗] 'numbers'            logit=18.641
+  Top 5 AFTER masking:
+    '_numbers'           logit=31.297
+    '_number'            logit=17.922
+    '_'                  logit=17.797
+    '_num'               logit=15.203
+    '_n'                 logit=14.070
+  → Chosen: '_numbers'
+
+--- Step 7 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '","'                logit=25.328
+    [✓] '",'                 logit=21.703
+    [✗] '",Ċ'                logit=18.734
+    [✗] '"}'                 logit=17.484
+    [✗] '"},{"'              logit=17.188
+  Top 5 AFTER masking:
+    '","'                logit=25.328
+    '",'                 logit=21.703
+    '"'                  logit=15.742
+  → Chosen: '","'
+
+--- Step 8 ---
+  Valid tokens: 7 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'arguments'          logit=23.406
+    [✗] 'args'               logit=20.641
+    [✓] 'parameters'         logit=20.484
+    [✗] 'function'           logit=19.625
+    [✗] 'argument'           logit=18.578
+  Top 5 AFTER masking:
+    'parameters'         logit=20.484
+    'parameter'          logit=16.406
+    'param'              logit=15.703
+    'para'               logit=12.188
+    'p'                  logit=11.414
+  → Chosen: 'parameters'
+
+--- Step 9 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":{"'               logit=27.016
+    [✓] '":'                 logit=25.078
+    [✗] '":"'                logit=23.797
+    [✗] '":["'               logit=21.828
+    [✗] '":[{"'              logit=21.250
+  Top 5 AFTER masking:
+    '":{"'               logit=27.016
+    '":'                 logit=25.078
+    '"'                  logit=17.109
+  → Chosen: '":{"'
+
+--- Step 10 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'a'                  logit=24.750
+    [✗] 'arguments'          logit=17.500
+    [✗] 'numbers'            logit=17.250
+    [✗] 'input'              logit=16.922
+    [✗] 'number'             logit=16.812
+  Top 5 AFTER masking:
+    'a'                  logit=24.750
+  → Chosen: 'a'
+
+--- Step 11 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":'                 logit=28.250
+    [✗] '":"'                logit=25.312
+    [✗] '":{"'               logit=20.703
+    [✗] '":['                logit=20.062
+    [✗] '":["'               logit=19.453
+  Top 5 AFTER masking:
+    '":'                 logit=28.250
+    '":-'                logit=18.594
+    '"'                  logit=17.047
+  → Chosen: '":'
+
+--- Step 12 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '1'                  logit=24.609
+    [✓] '3'                  logit=21.016
+    [✗] 'Ġ"'                 logit=20.562
+    [✓] '2'                  logit=20.500
+    [✓] '5'                  logit=18.844
+  Top 5 AFTER masking:
+    '1'                  logit=24.609
+    '3'                  logit=21.016
+    '2'                  logit=20.500
+    '5'                  logit=18.844
+    '4'                  logit=18.016
+  → Chosen: '1'
+
+--- Step 13 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=28.672
+    [✓] '2'                  logit=21.484
+    [✗] ','                  logit=20.797
+    [✗] ',"'                 logit=20.312
+    [✓] '5'                  logit=19.953
+  Top 5 AFTER masking:
+    '0'                  logit=28.672
+    '2'                  logit=21.484
+    '5'                  logit=19.953
+    '9'                  logit=18.641
+    '4'                  logit=18.484
+  → Chosen: '0'
+
+--- Step 14 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=28.594
+    [✗] ',"'                 logit=18.812
+    [✓] '2'                  logit=18.125
+    [✗] ','                  logit=18.109
+    [✓] '5'                  logit=17.469
+  Top 5 AFTER masking:
+    '0'                  logit=28.594
+    '2'                  logit=18.125
+    '5'                  logit=17.469
+    '4'                  logit=17.312
+    '1'                  logit=17.047
+  → Chosen: '0'
+
+--- Step 15 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✗] ',"'                 logit=24.281
+    [✗] ','                  logit=19.469
+    [✗] ',Ċ'                 logit=17.328
+    [✓] '.'                  logit=16.672
+    [✗] '},"'                logit=16.641
+  Top 5 AFTER masking:
+    '.'                  logit=16.672
+    '0'                  logit=16.250
+    '2'                  logit=11.719
+    '8'                  logit=11.430
+    '4'                  logit=11.328
+  → Chosen: '.'
+
+--- Step 16 ---
+  Valid tokens: 10 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=24.531
+    [✓] '5'                  logit=19.844
+    [✗] ',"'                 logit=18.969
+    [✗] 'Ġ"'                 logit=17.234
+    [✓] '2'                  logit=17.016
+  Top 5 AFTER masking:
+    '0'                  logit=24.531
+    '5'                  logit=19.844
+    '2'                  logit=17.016
+    '4'                  logit=16.984
+    '3'                  logit=16.797
+  → Chosen: '0'
+
+--- Step 17 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✓] ',"'                 logit=25.062
+    [✓] '0'                  logit=21.578
+    [✓] ','                  logit=19.859
+    [✗] '","'                logit=18.578
+    [✗] 'Ġ,"'                logit=16.578
+  Top 5 AFTER masking:
+    ',"'                 logit=25.062
+    '0'                  logit=21.578
+    ','                  logit=19.859
+    '1'                  logit=15.258
+    '2'                  logit=14.125
+  → Chosen: ',"'
+
+--- Step 18 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'b'                  logit=28.766
+    [✗] '"'                  logit=20.547
+    [✗] 'Ġb'                 logit=18.156
+    [✗] 'arguments'          logit=17.406
+    [✗] 'd'                  logit=16.703
+  Top 5 AFTER masking:
+    'b'                  logit=28.766
+  → Chosen: 'b'
+
+--- Step 19 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":'                 logit=28.047
+    [✗] '":"'                logit=18.844
+    [✓] '":-'                logit=17.094
+    [✗] ':'                  logit=16.391
+    [✗] '":['                logit=16.375
+  Top 5 AFTER masking:
+    '":'                 logit=28.047
+    '":-'                logit=17.094
+    '"'                  logit=15.219
+  → Chosen: '":'
+
+--- Step 20 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '2'                  logit=26.484
+    [✓] '1'                  logit=18.281
+    [✓] '5'                  logit=18.266
+    [✓] '3'                  logit=18.062
+    [✓] '4'                  logit=16.672
+  Top 5 AFTER masking:
+    '2'                  logit=26.484
+    '1'                  logit=18.281
+    '5'                  logit=18.266
+    '3'                  logit=18.062
+    '4'                  logit=16.672
+  → Chosen: '2'
+
+--- Step 21 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '5'                  logit=27.594
+    [✓] '0'                  logit=19.312
+    [✓] '2'                  logit=18.172
+    [✓] '4'                  logit=17.875
+    [✓] '.'                  logit=17.281
+  Top 5 AFTER masking:
+    '5'                  logit=27.594
+    '0'                  logit=19.312
+    '2'                  logit=18.172
+    '4'                  logit=17.875
+    '.'                  logit=17.281
+  → Chosen: '5'
+
+--- Step 22 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=28.078
+    [✓] '5'                  logit=18.484
+    [✓] '.'                  logit=17.422
+    [✓] '2'                  logit=16.797
+    [✓] '4'                  logit=15.977
+  Top 5 AFTER masking:
+    '0'                  logit=28.078
+    '5'                  logit=18.484
+    '.'                  logit=17.422
+    '2'                  logit=16.797
+    '4'                  logit=15.977
+  → Chosen: '0'
+
+--- Step 23 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '.'                  logit=24.438
+    [✗] '}}Ċ'                logit=22.359
+    [✗] '}}ĊĊ'               logit=21.000
+    [✗] '}}'                 logit=20.031
+    [✗] '"}}Ċ'               logit=17.906
+  Top 5 AFTER masking:
+    '.'                  logit=24.438
+    '0'                  logit=13.766
+    '2'                  logit=7.133
+    '1'                  logit=7.016
+    '5'                  logit=6.391
+  → Chosen: '.'
+
+--- Step 24 ---
+  Valid tokens: 10 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=30.609
+    [✗] '}}Ċ'                logit=20.062
+    [✓] '5'                  logit=19.500
+    [✓] '1'                  logit=18.859
+    [✓] '2'                  logit=18.438
+  Top 5 AFTER masking:
+    '0'                  logit=30.609
+    '5'                  logit=19.500
+    '1'                  logit=18.859
+    '2'                  logit=18.438
+    '4'                  logit=17.469
+  → Chosen: '0'
+
+--- Step 25 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✗] '}}Ċ'                logit=22.359
+    [✗] '}}ĊĊ'               logit=21.203
+    [✗] ',"'                 logit=20.500
+    [✓] '}}'                 logit=20.062
+    [✗] '},"'                logit=18.281
+  Top 5 AFTER masking:
+    '}}'                 logit=20.062
+    '}'                  logit=17.625
+    '0'                  logit=14.922
+    '1'                  logit=10.594
+    '2'                  logit=10.266
+  → Chosen: '}}'
+  -> fn_add_numbers({'a': 100.0, 'b': 250.0})
+Processing: sum of -5.5 and 3
+
+--- Step 0 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'Ġ{"'                logit=20.375
+    [✗] 'Ġ{Ċ'                logit=19.562
+    [✗] 'Ġ{'                 logit=19.547
+    [✗] 'ĠĊ'                 logit=17.641
+    [✗] "Ġ{'"                logit=16.859
+  Top 5 AFTER masking:
+    '{"'                 logit=13.539
+    '{'                  logit=8.305
+  → Chosen: '{"'
+
+--- Step 1 ---
+  Valid tokens: 4 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'result'             logit=19.406
+    [✗] 'response'           logit=18.844
+    [✗] 'function'           logit=18.641
+    [✗] 'user'               logit=17.781
+    [✗] 'error'              logit=17.562
+  Top 5 AFTER masking:
+    'name'               logit=15.516
+    'n'                  logit=11.352
+    'na'                 logit=7.574
+    'nam'                logit=6.625
+  → Chosen: 'name'
+
+--- Step 2 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":"'                logit=24.219
+    [✓] '":'                 logit=23.500
+    [✗] '":"","'             logit=18.797
+    [✗] '_of'                logit=17.719
+    [✗] '","'                logit=17.406
+  Top 5 AFTER masking:
+    '":"'                logit=24.219
+    '":'                 logit=23.500
+    '"'                  logit=16.656
+  → Chosen: '":"'
+
+--- Step 3 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'sum'                logit=19.281
+    [✗] 'user'               logit=18.672
+    [✗] 'User'               logit=17.453
+    [✗] 'Sum'                logit=16.500
+    [✗] 'test'               logit=16.203
+  Top 5 AFTER masking:
+    'f'                  logit=13.398
+    'fn'                 logit=11.523
+  → Chosen: 'f'
+
+--- Step 4 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✗] '1'                  logit=16.656
+    [✗] 'unt'                logit=16.062
+    [✗] 'ns'                 logit=15.844
+    [✗] '","'                logit=15.664
+    [✗] 'izz'                logit=15.406
+  Top 5 AFTER masking:
+    'n'                  logit=-3.867
+  → Chosen: 'n'
+
+--- Step 5 ---
+  Valid tokens: 16 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_add'               logit=26.094
+    [✓] '_sub'               logit=22.031
+    [✓] '_g'                 logit=19.969
+    [✗] '_sum'               logit=18.984
+    [✓] '_get'               logit=17.984
+  Top 5 AFTER masking:
+    '_add'               logit=26.094
+    '_sub'               logit=22.031
+    '_g'                 logit=19.969
+    '_get'               logit=17.984
+    '_ad'                logit=15.047
+  → Chosen: '_add'
+
+--- Step 6 ---
+  Valid tokens: 5 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_numbers'           logit=31.891
+    [✗] '_two'               logit=20.625
+    [✗] '",Ċ'                logit=19.078
+    [✗] '","'                logit=18.922
+    [✗] 'numbers'            logit=18.188
+  Top 5 AFTER masking:
+    '_numbers'           logit=31.891
+    '_number'            logit=17.984
+    '_'                  logit=17.203
+    '_num'               logit=15.555
+    '_n'                 logit=13.648
+  → Chosen: '_numbers'
+
+--- Step 7 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '","'                logit=25.922
+    [✓] '",'                 logit=21.906
+    [✗] '",Ċ'                logit=19.500
+    [✗] '"}'                 logit=16.922
+    [✗] '","","'             logit=16.922
+  Top 5 AFTER masking:
+    '","'                logit=25.922
+    '",'                 logit=21.906
+    '"'                  logit=16.156
+  → Chosen: '","'
+
+--- Step 8 ---
+  Valid tokens: 7 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'arguments'          logit=24.859
+    [✗] 'args'               logit=22.109
+    [✓] 'parameters'         logit=21.406
+    [✗] 'function'           logit=21.000
+    [✗] 'argument'           logit=18.984
+  Top 5 AFTER masking:
+    'parameters'         logit=21.406
+    'parameter'          logit=16.859
+    'param'              logit=15.953
+    'para'               logit=12.586
+    'p'                  logit=11.031
+  → Chosen: 'parameters'
+
+--- Step 9 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":{"'               logit=28.562
+    [✓] '":'                 logit=26.219
+    [✗] '":"'                logit=25.609
+    [✗] '":["'               logit=22.844
+    [✗] '":[{"'              logit=22.156
+  Top 5 AFTER masking:
+    '":{"'               logit=28.562
+    '":'                 logit=26.219
+    '"'                  logit=17.562
+  → Chosen: '":{"'
+
+--- Step 10 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'a'                  logit=26.078
+    [✗] 'arguments'          logit=18.375
+    [✗] 'result'             logit=17.547
+    [✗] 'b'                  logit=17.469
+    [✗] 'args'               logit=17.453
+  Top 5 AFTER masking:
+    'a'                  logit=26.078
+  → Chosen: 'a'
+
+--- Step 11 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":'                 logit=27.875
+    [✓] '":-'                logit=27.297
+    [✗] '":"'                logit=26.391
+    [✗] '":[-'               logit=25.859
+    [✗] '":{"'               logit=22.484
+  Top 5 AFTER masking:
+    '":'                 logit=27.875
+    '":-'                logit=27.297
+    '"'                  logit=18.359
+  → Chosen: '":'
+
+--- Step 12 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '-'                  logit=24.859
+    [✗] 'Ġ-'                 logit=22.516
+    [✓] '5'                  logit=20.766
+    [✗] 'Ġ"-'                logit=20.719
+    [✓] '1'                  logit=18.828
+  Top 5 AFTER masking:
+    '-'                  logit=24.859
+    '5'                  logit=20.766
+    '1'                  logit=18.828
+    '2'                  logit=18.000
+    '4'                  logit=17.141
+  → Chosen: '-'
+
+--- Step 13 ---
+  Valid tokens: 10 / 151936
+  Top 5 BEFORE masking:
+    [✓] '5'                  logit=29.469
+    [✓] '4'                  logit=20.641
+    [✓] '1'                  logit=20.438
+    [✓] '3'                  logit=19.688
+    [✓] '6'                  logit=19.375
+  Top 5 AFTER masking:
+    '5'                  logit=29.469
+    '4'                  logit=20.641
+    '1'                  logit=20.438
+    '3'                  logit=19.688
+    '6'                  logit=19.375
+  → Chosen: '5'
+
+--- Step 14 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '.'                  logit=29.125
+    [✗] ',"'                 logit=22.766
+    [✗] ','                  logit=20.500
+    [✗] ',-'                 logit=18.422
+    [✓] '5'                  logit=17.969
+  Top 5 AFTER masking:
+    '.'                  logit=29.125
+    '5'                  logit=17.969
+    '4'                  logit=13.367
+    '0'                  logit=13.328
+    '9'                  logit=12.953
+  → Chosen: '.'
+
+--- Step 15 ---
+  Valid tokens: 10 / 151936
+  Top 5 BEFORE masking:
+    [✓] '5'                  logit=29.922
+    [✓] '6'                  logit=19.891
+    [✓] '4'                  logit=19.641
+    [✗] ',"'                 logit=19.250
+    [✓] '3'                  logit=19.203
+  Top 5 AFTER masking:
+    '5'                  logit=29.922
+    '6'                  logit=19.891
+    '4'                  logit=19.641
+    '3'                  logit=19.203
+    '2'                  logit=18.625
+  → Chosen: '5'
+
+--- Step 16 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✓] ',"'                 logit=25.422
+    [✓] ','                  logit=19.938
+    [✗] ',Ċ'                 logit=19.172
+    [✗] '}}Ċ'                logit=18.844
+    [✗] '}}'                 logit=17.703
+  Top 5 AFTER masking:
+    ',"'                 logit=25.422
+    ','                  logit=19.938
+    '0'                  logit=16.859
+    '1'                  logit=13.711
+    '2'                  logit=13.688
+  → Chosen: ',"'
+
+--- Step 17 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'b'                  logit=29.266
+    [✗] '"'                  logit=21.047
+    [✗] 'Ġb'                 logit=18.469
+    [✗] 'arguments'          logit=17.688
+    [✗] 'Ġ"'                 logit=17.531
+  Top 5 AFTER masking:
+    'b'                  logit=29.266
+  → Chosen: 'b'
+
+--- Step 18 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":'                 logit=26.156
+    [✗] '":"'                logit=18.828
+    [✓] '":-'                logit=16.609
+    [✗] '":"+'               logit=16.062
+    [✗] '":['                logit=15.242
+  Top 5 AFTER masking:
+    '":'                 logit=26.156
+    '":-'                logit=16.609
+    '"'                  logit=13.711
+  → Chosen: '":'
+
+--- Step 19 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✓] '3'                  logit=26.641
+    [✓] '1'                  logit=18.953
+    [✓] '0'                  logit=18.641
+    [✓] '2'                  logit=18.500
+    [✓] '-'                  logit=18.344
+  Top 5 AFTER masking:
+    '3'                  logit=26.641
+    '1'                  logit=18.953
+    '0'                  logit=18.641
+    '2'                  logit=18.500
+    '-'                  logit=18.344
+  → Chosen: '3'
+
+--- Step 20 ---
+  Valid tokens: 11 / 151936
+  Top 5 BEFORE masking:
+    [✗] '}}Ċ'                logit=23.859
+    [✗] '}}ĊĊ'               logit=22.859
+    [✗] ',"'                 logit=20.969
+    [✗] '}}'                 logit=20.750
+    [✗] '}'                  logit=18.797
+  Top 5 AFTER masking:
+    '.'                  logit=17.906
+    '0'                  logit=12.844
+    '2'                  logit=10.656
+    '4'                  logit=9.992
+    '3'                  logit=9.820
+  → Chosen: '.'
+
+--- Step 21 ---
+  Valid tokens: 10 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=25.266
+    [✓] '5'                  logit=21.344
+    [✓] '3'                  logit=19.547
+    [✓] '2'                  logit=18.969
+    [✗] '}}Ċ'                logit=18.672
+  Top 5 AFTER masking:
+    '0'                  logit=25.266
+    '5'                  logit=21.344
+    '3'                  logit=19.547
+    '2'                  logit=18.969
+    '4'                  logit=18.391
+  → Chosen: '0'
+
+--- Step 22 ---
+  Valid tokens: 12 / 151936
+  Top 5 BEFORE masking:
+    [✗] '}}Ċ'                logit=23.250
+    [✗] '}}ĊĊ'               logit=22.078
+    [✗] ',"'                 logit=20.656
+    [✓] '}}'                 logit=20.250
+    [✗] '},"'                logit=18.312
+  Top 5 AFTER masking:
+    '}}'                 logit=20.250
+    '}'                  logit=18.156
+    '0'                  logit=17.219
+    '1'                  logit=12.875
+    '4'                  logit=11.938
+  → Chosen: '}}'
+  -> fn_add_numbers({'a': -5.5, 'b': 3.0})
+Processing: replace all dots with dashes in 'a.b.c'
+
+--- Step 0 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'Ġ{"'                logit=20.141
+    [✗] 'Ġ{'                 logit=19.750
+    [✗] 'Ġ{Ċ'                logit=19.344
+    [✗] 'ĠĊ'                 logit=17.703
+    [✗] "Ġ{'"                logit=17.250
+  Top 5 AFTER masking:
+    '{"'                 logit=13.375
+    '{'                  logit=8.789
+  → Chosen: '{"'
+
+--- Step 1 ---
+  Valid tokens: 4 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'result'             logit=18.938
+    [✗] 'response'           logit=18.875
+    [✗] 'user'               logit=18.328
+    [✗] 'function'           logit=18.141
+    [✗] 'request'            logit=17.812
+  Top 5 AFTER masking:
+    'name'               logit=15.617
+    'n'                  logit=11.586
+    'na'                 logit=7.488
+    'nam'                logit=6.715
+  → Chosen: 'name'
+
+--- Step 2 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":"'                logit=23.656
+    [✓] '":'                 logit=22.844
+    [✗] '":"","'             logit=18.109
+    [✗] '","'                logit=17.156
+    [✗] '_of'                logit=17.031
+  Top 5 AFTER masking:
+    '":"'                logit=23.656
+    '":'                 logit=22.844
+    '"'                  logit=16.125
+  → Chosen: '":"'
+
+--- Step 3 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'user'               logit=17.844
+    [✗] 'User'               logit=17.062
+    [✗] 'test'               logit=15.727
+    [✗] 'John'               logit=15.578
+    [✗] 'a'                  logit=15.320
+  Top 5 AFTER masking:
+    'f'                  logit=12.305
+    'fn'                 logit=9.312
+  → Chosen: 'f'
+
+--- Step 4 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✗] '1'                  logit=16.688
+    [✗] 'ro'                 logit=16.359
+    [✗] '","'                logit=15.992
+    [✗] '3'                  logit=15.203
+    [✗] 'ancy'               logit=15.203
+  Top 5 AFTER masking:
+    'n'                  logit=-6.059
+  → Chosen: 'n'
+
+--- Step 5 ---
+  Valid tokens: 16 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_sub'               logit=28.500
+    [✓] '_get'               logit=25.344
+    [✗] '_replace'           logit=22.500
+    [✗] '","'                logit=20.141
+    [✓] '_add'               logit=20.141
+  Top 5 AFTER masking:
+    '_sub'               logit=28.500
+    '_get'               logit=25.344
+    '_add'               logit=20.141
+    '_re'                logit=19.891
+    '_g'                 logit=18.812
+  → Chosen: '_sub'
+
+--- Step 6 ---
+  Valid tokens: 5 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'stitute'            logit=36.594
+    [✓] 'stit'               logit=28.484
+    [✗] 'strate'             logit=21.062
+    [✗] 'STITUTE'            logit=21.047
+    [✗] 'stitution'          logit=20.656
+  Top 5 AFTER masking:
+    'stitute'            logit=36.594
+    'stit'               logit=28.484
+    'st'                 logit=19.906
+    'sti'                logit=17.484
+    's'                  logit=2.926
+  → Chosen: 'stitute'
+
+--- Step 7 ---
+  Valid tokens: 5 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_string'            logit=32.438
+    [✓] '_str'               logit=19.656
+    [✗] '-string'            logit=19.438
+    [✗] '_strings'           logit=19.422
+    [✗] '_with'              logit=19.219
+  Top 5 AFTER masking:
+    '_string'            logit=32.438
+    '_str'               logit=19.656
+    '_'                  logit=17.047
+    '_st'                logit=14.758
+    '_s'                 logit=14.539
+  → Chosen: '_string'
+
+--- Step 8 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_with'              logit=32.812
+    [✗] '","'                logit=22.531
+    [✗] '",Ċ'                logit=20.953
+    [✗] '",'                 logit=20.219
+    [✗] '-with'              logit=19.359
+  Top 5 AFTER masking:
+    '_with'              logit=32.812
+    '_'                  logit=16.203
+    '_w'                 logit=16.000
+  → Chosen: '_with'
+
+--- Step 9 ---
+  Valid tokens: 5 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_regex'             logit=34.500
+    [✗] '_regular'           logit=21.375
+    [✓] '_re'                logit=21.141
+    [✗] '_regression'        logit=21.062
+    [✓] '_reg'               logit=20.297
+  Top 5 AFTER masking:
+    '_regex'             logit=34.500
+    '_re'                logit=21.141
+    '_reg'               logit=20.297
+    '_'                  logit=17.656
+    '_r'                 logit=14.352
+  → Chosen: '_regex'
+
+--- Step 10 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '","'                logit=25.453
+    [✓] '",'                 logit=22.750
+    [✗] '",Ċ'                logit=20.000
+    [✗] '"}'                 logit=18.484
+    [✗] '"}Ċ'                logit=18.344
+  Top 5 AFTER masking:
+    '","'                logit=25.453
+    '",'                 logit=22.750
+    '"'                  logit=16.625
+  → Chosen: '","'
+
+--- Step 11 ---
+  Valid tokens: 7 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'arguments'          logit=23.938
+    [✗] 'source'             logit=22.172
+    [✗] 'args'               logit=21.453
+    [✗] 'function'           logit=20.531
+    [✓] 'parameters'         logit=20.203
+  Top 5 AFTER masking:
+    'parameters'         logit=20.203
+    'parameter'          logit=16.688
+    'param'              logit=16.141
+    'para'               logit=12.211
+    'p'                  logit=10.812
+  → Chosen: 'parameters'
+
+--- Step 12 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":{"'               logit=26.906
+    [✓] '":'                 logit=25.703
+    [✗] '":"'                logit=25.172
+    [✗] '":["'               logit=22.234
+    [✗] '":[{"'              logit=21.672
+  Top 5 AFTER masking:
+    '":{"'               logit=26.906
+    '":'                 logit=25.703
+    '"'                  logit=18.031
+  → Chosen: '":{"'
+
+--- Step 13 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'source'             logit=24.484
+    [✗] 'regex'              logit=18.891
+    [✗] 'arguments'          logit=17.812
+    [✗] 'input'              logit=17.328
+    [✗] 'src'                logit=17.156
+  Top 5 AFTER masking:
+    'source'             logit=24.484
+    's'                  logit=13.414
+    'so'                 logit=10.492
+  → Chosen: 'source'
+
+--- Step 14 ---
+  Valid tokens: 5 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_string'            logit=30.750
+    [✗] '":"'                logit=23.766
+    [✗] '":'                 logit=21.641
+    [✓] '_str'               logit=20.672
+    [✗] 'String'             logit=19.156
+  Top 5 AFTER masking:
+    '_string'            logit=30.750
+    '_str'               logit=20.672
+    '_'                  logit=15.594
+    '_s'                 logit=14.875
+    '_st'                logit=13.695
+  → Chosen: '_string'
+
+--- Step 15 ---
+  Valid tokens: 8 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":"'                logit=28.938
+    [✓] '":'                 logit=26.703
+    [✓] '":"/'               logit=20.312
+    [✗] '","'                logit=19.609
+    [✗] '":["'               logit=19.344
+  Top 5 AFTER masking:
+    '":"'                logit=28.938
+    '":'                 logit=26.703
+    '":"/'               logit=20.312
+    '":"","'             logit=19.062
+    '":"+'               logit=18.859
+  → Chosen: '":"'
+
+--- Step 16 ---
+  Valid tokens: 90024 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'a'                  logit=23.797
+    [✓] "'"                  logit=17.969
+    [✓] "','"                logit=17.344
+    [✓] "'."                 logit=16.531
+    [✓] '\'",'               logit=16.359
+  Top 5 AFTER masking:
+    'a'                  logit=23.797
+    "'"                  logit=17.969
+    "','"                logit=17.344
+    "'."                 logit=16.531
+    '\'",'               logit=16.359
+  → Chosen: 'a'
+
+--- Step 17 ---
+  Valid tokens: 90024 / 151936
+  Top 5 BEFORE masking:
+    [✓] '.b'                 logit=24.906
+    [✓] '.d'                 logit=16.609
+    [✓] 'Ġ.'                 logit=16.234
+    [✓] '..'                 logit=15.578
+    [✓] '.bpm'               logit=15.469
+  Top 5 AFTER masking:
+    '.b'                 logit=24.906
+    '.d'                 logit=16.609
+    'Ġ.'                 logit=16.234
+    '..'                 logit=15.578
+    '.bpm'               logit=15.469
+  → Chosen: '.b'
+
+--- Step 18 ---
+  Valid tokens: 90024 / 151936
+  Top 5 BEFORE masking:
+    [✓] '.c'                 logit=28.047
+    [✓] '","'                logit=19.703
+    [✓] ',c'                 logit=18.766
+    [✓] '.'                  logit=18.109
+    [✓] '.d'                 logit=16.828
+  Top 5 AFTER masking:
+    '.c'                 logit=28.047
+    '","'                logit=19.703
+    ',c'                 logit=18.766
+    '.'                  logit=18.109
+    '.d'                 logit=16.828
+  → Chosen: '.c'
+
+--- Step 19 ---
+  Valid tokens: 90024 / 151936
+  Top 5 BEFORE masking:
+    [✓] '","'                logit=26.547
+    [✓] '",'                 logit=22.938
+    [✗] '"}}Ċ'               logit=20.500
+    [✗] '"}}'                logit=20.016
+    [✗] '",Ċ'                logit=19.438
+  Top 5 AFTER masking:
+    '","'                logit=26.547
+    '",'                 logit=22.938
+    '"'                  logit=17.828
+    '\\n'                logit=14.727
+    'Ġ","'               logit=14.672
+  → Chosen: '","'
+
+--- Step 20 ---
+  Valid tokens: 4 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'regex'              logit=29.234
+    [✗] 'replacement'        logit=22.000
+    [✗] 'pattern'            logit=21.125
+    [✗] 'Ġregex'             logit=18.750
+    [✗] 'replace'            logit=18.641
+  Top 5 AFTER masking:
+    'regex'              logit=29.234
+    'reg'                logit=18.125
+    're'                 logit=16.391
+    'r'                  logit=9.492
+  → Chosen: 'regex'
+
+--- Step 21 ---
+  Valid tokens: 8 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":"'                logit=29.328
+    [✓] '":"/'               logit=25.875
+    [✓] '":'                 logit=23.422
+    [✗] '_pattern'           logit=21.922
+    [✓] '":"+'               logit=20.484
+  Top 5 AFTER masking:
+    '":"'                logit=29.328
+    '":"/'               logit=25.875
+    '":'                 logit=23.422
+    '":"+'               logit=20.484
+    '":"","'             logit=19.234
+  → Chosen: '":"'
+
+--- Step 22 ---
+  Valid tokens: 90024 / 151936
+  Top 5 BEFORE masking:
+    [✓] '.*'                 logit=22.047
+    [✓] '\\\\'               logit=21.969
+    [✓] '\\'                 logit=21.156
+    [✓] '/'                  logit=20.969
+    [✓] '\\\\.'              logit=20.344
+  Top 5 AFTER masking:
+    '.*'                 logit=22.047
+    '\\\\'               logit=21.969
+    '\\'                 logit=21.156
+    '/'                  logit=20.969
+    '\\\\.'              logit=20.344
+  → Chosen: '.*'
+
+--- Step 23 ---
+  Valid tokens: 90024 / 151936
+  Top 5 BEFORE masking:
+    [✓] '","'                logit=23.516
+    [✓] '?'                  logit=23.250
+    [✓] '\\\\'               logit=22.875
+    [✓] '\\\\.'              logit=20.594
+    [✓] '\\'                 logit=20.359
+  Top 5 AFTER masking:
+    '","'                logit=23.516
+    '?'                  logit=23.250
+    '\\\\'               logit=22.875
+    '\\\\.'              logit=20.594
+    '\\'                 logit=20.359
+  → Chosen: '","'
+
+--- Step 24 ---
+  Valid tokens: 5 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'replacement'        logit=33.688
+    [✓] 're'                 logit=26.719
+    [✗] 'placement'          logit=23.891
+    [✗] 'Ġreplacement'       logit=22.469
+    [✓] 'replace'            logit=22.312
+  Top 5 AFTER masking:
+    'replacement'        logit=33.688
+    're'                 logit=26.719
+    'replace'            logit=22.312
+    'rep'                logit=15.641
+    'r'                  logit=14.453
+  → Chosen: 'replacement'
+
+--- Step 25 ---
+  Valid tokens: 7 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":"'                logit=32.969
+    [✓] '":'                 logit=24.609
+    [✓] '":""'               logit=21.594
+    [✗] '":"","'             logit=21.016
+    [✓] '":"+'               logit=20.625
+  Top 5 AFTER masking:
+    '":"'                logit=32.969
+    '":'                 logit=24.609
+    '":""'               logit=21.594
+    '":"+'               logit=20.625
+    '":"/'               logit=20.203
+  → Chosen: '":"'
+
+--- Step 26 ---
+  Valid tokens: 89979 / 151936
+  Top 5 BEFORE masking:
+    [✓] '--'                 logit=26.781
+    [✓] '-'                  logit=26.625
+    [✓] '---'                logit=24.797
+    [✓] '----'               logit=22.922
+    [✓] '...'                logit=22.312
+  Top 5 AFTER masking:
+    '--'                 logit=26.781
+    '-'                  logit=26.625
+    '---'                logit=24.797
+    '----'               logit=22.922
+    '...'                logit=22.312
+  → Chosen: '--'
+
+--- Step 27 ---
+  Valid tokens: 89979 / 151936
+  Top 5 BEFORE masking:
+    [✓] '"}'                 logit=24.234
+    [✗] '"}}Ċ'               logit=23.734
+    [✓] '."'                 logit=22.312
+    [✗] '"}Ċ'                logit=21.938
+    [✗] '"},Ċ'               logit=21.062
+  Top 5 AFTER masking:
+    '"}'                 logit=24.234
+    '."'                 logit=22.312
+    '"'                  logit=20.297
+    '.'                  logit=20.266
+    '"}}'                logit=20.234
+  → Chosen: '"}'
+
+--- Step 28 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✗] '}ĊĊ'                logit=28.141
+    [✗] '}Ċ'                 logit=23.250
+    [✗] 'Ġ}ĊĊ'               logit=20.531
+    [✗] ',"'                 logit=19.812
+    [✗] 'Ġ}Ċ'                logit=18.797
+  Top 5 AFTER masking:
+    '}'                  logit=16.047
+  → Chosen: '}'
+  -> fn_substitute_string_with_regex({'source_string': 'a.b.c', 'regex': '.*', 'replacement': '--'})
+Processing: Greet O'Brien
+
+--- Step 0 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'Ġ{"'                logit=20.547
+    [✗] 'Ġ{'                 logit=19.875
+    [✗] 'Ġ{Ċ'                logit=19.641
+    [✗] 'ĠĊ'                 logit=17.609
+    [✗] "Ġ{'"                logit=17.109
+  Top 5 AFTER masking:
+    '{"'                 logit=13.570
+    '{'                  logit=8.531
+  → Chosen: '{"'
+
+--- Step 1 ---
+  Valid tokens: 4 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'response'           logit=20.062
+    [✗] 'result'             logit=19.250
+    [✗] 'user'               logit=18.750
+    [✗] 'g'                  logit=18.516
+    [✗] 'output'             logit=17.953
+  Top 5 AFTER masking:
+    'name'               logit=17.766
+    'n'                  logit=11.984
+    'na'                 logit=8.102
+    'nam'                logit=7.184
+  → Chosen: 'name'
+
+--- Step 2 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":'                 logit=23.453
+    [✓] '":"'                logit=23.031
+    [✗] '_of'                logit=16.891
+    [✓] '"'                  logit=16.812
+    [✗] '":"","'             logit=16.609
+  Top 5 AFTER masking:
+    '":'                 logit=23.453
+    '":"'                logit=23.031
+    '"'                  logit=16.812
+  → Chosen: '":'
+
+--- Step 3 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'Ġ"'                 logit=24.703
+    [✗] 'null'               logit=16.250
+    [✗] '1'                  logit=15.375
+    [✗] '["'                 logit=15.156
+    [✗] '2'                  logit=14.578
+  Top 5 AFTER masking:
+    '"'                  logit=9.062
+    '"f'                 logit=-0.801
+  → Chosen: '"'
+
+--- Step 4 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'O'                  logit=25.000
+    [✗] 'G'                  logit=17.359
+    [✗] 'B'                  logit=17.094
+    [✗] 'A'                  logit=16.719
+    [✗] 'D'                  logit=16.656
+  Top 5 AFTER masking:
+    'f'                  logit=10.906
+    'fn'                 logit=8.852
+  → Chosen: 'f'
+
+--- Step 5 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✗] '",'                 logit=16.344
+    [✗] '1'                  logit=15.875
+    [✗] 'iona'               logit=15.797
+    [✗] 'ro'                 logit=15.164
+    [✗] '0'                  logit=15.055
+  Top 5 AFTER masking:
+    'n'                  logit=-6.539
+  → Chosen: 'n'
+
+--- Step 6 ---
+  Valid tokens: 16 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_g'                 logit=28.203
+    [✓] '_get'               logit=24.156
+    [✓] '_sub'               logit=21.672
+    [✓] '_add'               logit=19.938
+    [✓] '_re'                logit=19.328
+  Top 5 AFTER masking:
+    '_g'                 logit=28.203
+    '_get'               logit=24.156
+    '_sub'               logit=21.672
+    '_add'               logit=19.938
+    '_re'                logit=19.328
+  → Chosen: '_g'
+
+--- Step 7 ---
+  Valid tokens: 6 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'reet'               logit=32.844
+    [✗] 'reeting'            logit=21.797
+    [✓] 're'                 logit=21.750
+    [✗] 'reat'               logit=20.906
+    [✗] 'REET'               logit=19.438
+  Top 5 AFTER masking:
+    'reet'               logit=32.844
+    're'                 logit=21.750
+    'ree'                logit=15.672
+    'et'                 logit=12.602
+    'r'                  logit=8.047
+  → Chosen: 'reet'
+
+--- Step 8 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '","'                logit=23.422
+    [✓] '",'                 logit=22.688
+    [✗] '"}Ċ'                logit=18.906
+    [✗] '"}'                 logit=18.703
+    [✗] '"}ĊĊ'               logit=17.859
+  Top 5 AFTER masking:
+    '","'                logit=23.422
+    '",'                 logit=22.688
+    '"'                  logit=17.359
+  → Chosen: '","'
+
+--- Step 9 ---
+  Valid tokens: 7 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'arguments'          logit=23.484
+    [✗] 'args'               logit=19.750
+    [✗] 'argument'           logit=19.016
+    [✗] 'function'           logit=18.609
+    [✓] 'parameters'         logit=18.516
+  Top 5 AFTER masking:
+    'parameters'         logit=18.516
+    'parameter'          logit=15.836
+    'param'              logit=14.562
+    'para'               logit=10.375
+    'p'                  logit=10.141
+  → Chosen: 'parameters'
+
+--- Step 10 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":'                 logit=25.594
+    [✓] '":{"'               logit=24.500
+    [✗] '":"'                logit=22.172
+    [✗] '":["'               logit=20.750
+    [✗] '":[{"'              logit=19.734
+  Top 5 AFTER masking:
+    '":'                 logit=25.594
+    '":{"'               logit=24.500
+    '"'                  logit=17.312
+  → Chosen: '":'
+
+--- Step 11 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'Ġ{"'                logit=22.406
+    [✓] '{"'                 logit=21.953
+    [✗] 'Ġ[{"'               logit=21.188
+    [✗] '["'                 logit=20.422
+    [✓] '{'                  logit=20.328
+  Top 5 AFTER masking:
+    '{"'                 logit=21.953
+    '{'                  logit=20.328
+  → Chosen: '{"'
+
+--- Step 12 ---
+  Valid tokens: 4 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'name'               logit=23.703
+    [✗] 'arguments'          logit=19.156
+    [✗] 'args'               logit=17.969
+    [✗] 'user'               logit=17.672
+    [✗] 'message'            logit=17.672
+  Top 5 AFTER masking:
+    'name'               logit=23.703
+    'n'                  logit=14.000
+    'nam'                logit=10.562
+    'na'                 logit=9.414
+  → Chosen: 'name'
+
+--- Step 13 ---
+  Valid tokens: 7 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":'                 logit=26.250
+    [✓] '":"'                logit=26.188
+    [✗] '":["'               logit=19.312
+    [✗] '":{"'               logit=19.281
+    [✓] '":"/'               logit=18.391
+  Top 5 AFTER masking:
+    '":'                 logit=26.250
+    '":"'                logit=26.188
+    '":"/'               logit=18.391
+    '":""'               logit=18.156
+    '"'                  logit=16.609
+  → Chosen: '":'
+
+--- Step 14 ---
+  Valid tokens: 265 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'Ġ"'                 logit=22.688
+    [✗] '1'                  logit=17.656
+    [✗] 'null'               logit=17.172
+    [✗] '["'                 logit=16.578
+    [✗] '2'                  logit=16.375
+  Top 5 AFTER masking:
+    '""'                 logit=13.227
+    '","'                logit=12.922
+    '":'                 logit=12.391
+    '":"'                logit=11.805
+    '"}'                 logit=11.586
+  → Chosen: '""'
+
+--- Step 15 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] '}}Ċ'                logit=18.344
+    [✗] 'O'                  logit=18.062
+    [✗] '}}ĊĊ'               logit=17.359
+    [✗] ',"'                 logit=17.297
+    [✓] '}'                  logit=17.031
+  Top 5 AFTER masking:
+    '}'                  logit=17.031
+    '}}'                 logit=16.484
+  → Chosen: '}'
+
+--- Step 16 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✗] '}ĊĊĊ'               logit=19.078
+    [✗] 'Ġ}ĊĊ'               logit=18.562
+    [✗] 'Ġ}Ċ'                logit=17.219
+    [✗] 'Ġ}'                 logit=15.945
+    [✗] '...'                logit=15.789
+  Top 5 AFTER masking:
+    '}'                  logit=3.525
+  → Chosen: '}'
+  -> fn_greet({'name': ''})
+Processing: say hello to john but backwards
+
+--- Step 0 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'Ġ{"'                logit=20.516
+    [✗] 'Ġ{'                 logit=19.703
+    [✗] 'Ġ{Ċ'                logit=19.344
+    [✗] 'Ġ['                 logit=17.406
+    [✗] 'ĠĊ'                 logit=17.344
+  Top 5 AFTER masking:
+    '{"'                 logit=13.711
+    '{'                  logit=8.109
+  → Chosen: '{"'
+
+--- Step 1 ---
+  Valid tokens: 4 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'response'           logit=19.828
+    [✗] 'result'             logit=18.500
+    [✗] 'user'               logit=18.328
+    [✗] 'output'             logit=17.703
+    [✗] 'status'             logit=17.391
+  Top 5 AFTER masking:
+    'name'               logit=16.781
+    'n'                  logit=11.203
+    'na'                 logit=8.188
+    'nam'                logit=7.469
+  → Chosen: 'name'
+
+--- Step 2 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":'                 logit=23.375
+    [✓] '":"'                logit=23.156
+    [✗] '":"","'             logit=17.562
+    [✗] '":["'               logit=16.828
+    [✓] '"'                  logit=16.438
+  Top 5 AFTER masking:
+    '":'                 logit=23.375
+    '":"'                logit=23.156
+    '"'                  logit=16.438
+  → Chosen: '":'
+
+--- Step 3 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'Ġ"'                 logit=24.203
+    [✗] 'null'               logit=16.469
+    [✗] '1'                  logit=15.719
+    [✗] '["'                 logit=14.688
+    [✗] 'Ġ{"'                logit=14.555
+  Top 5 AFTER masking:
+    '"'                  logit=8.211
+    '"f'                 logit=-2.084
+  → Chosen: '"'
+
+--- Step 4 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'john'               logit=23.344
+    [✗] 'John'               logit=19.281
+    [✗] 'j'                  logit=17.547
+    [✗] 'Ġjohn'              logit=15.844
+    [✗] 'user'               logit=15.625
+  Top 5 AFTER masking:
+    'f'                  logit=10.805
+    'fn'                 logit=8.625
+  → Chosen: 'f'
+
+--- Step 5 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'iona'               logit=16.844
+    [✗] 'ro'                 logit=16.781
+    [✗] '",'                 logit=16.594
+    [✗] '1'                  logit=16.125
+    [✗] 'arn'                logit=15.969
+  Top 5 AFTER masking:
+    'n'                  logit=-8.391
+  → Chosen: 'n'
+
+--- Step 6 ---
+  Valid tokens: 16 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_g'                 logit=23.953
+    [✓] '_get'               logit=21.531
+    [✓] '_sub'               logit=21.344
+    [✓] '_s'                 logit=19.297
+    [✓] '_reverse'           logit=18.938
+  Top 5 AFTER masking:
+    '_g'                 logit=23.953
+    '_get'               logit=21.531
+    '_sub'               logit=21.344
+    '_s'                 logit=19.297
+    '_reverse'           logit=18.938
+  → Chosen: '_g'
+
+--- Step 7 ---
+  Valid tokens: 6 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'reet'               logit=33.344
+    [✗] 'reeting'            logit=23.453
+    [✓] 're'                 logit=22.047
+    [✗] 'REET'               logit=20.078
+    [✗] 'reat'               logit=19.891
+  Top 5 AFTER masking:
+    'reet'               logit=33.344
+    're'                 logit=22.047
+    'ree'                logit=15.344
+    'et'                 logit=12.461
+    'r'                  logit=6.219
+  → Chosen: 'reet'
+
+--- Step 8 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '","'                logit=23.141
+    [✓] '",'                 logit=21.953
+    [✗] '"}'                 logit=17.219
+    [✗] '"}Ċ'                logit=17.000
+    [✗] '"}ĊĊ'               logit=16.938
+  Top 5 AFTER masking:
+    '","'                logit=23.141
+    '",'                 logit=21.953
+    '"'                  logit=16.547
+  → Chosen: '","'
+
+--- Step 9 ---
+  Valid tokens: 7 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'arguments'          logit=24.000
+    [✗] 'args'               logit=20.406
+    [✗] 'argument'           logit=19.406
+    [✓] 'parameters'         logit=19.172
+    [✗] 'function'           logit=18.891
+  Top 5 AFTER masking:
+    'parameters'         logit=19.172
+    'parameter'          logit=16.469
+    'param'              logit=15.320
+    'para'               logit=11.016
+    'p'                  logit=9.609
+  → Chosen: 'parameters'
+
+--- Step 10 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":'                 logit=25.422
+    [✓] '":{"'               logit=24.594
+    [✗] '":"'                logit=22.453
+    [✗] '":["'               logit=21.328
+    [✗] '":[{"'              logit=19.797
+  Top 5 AFTER masking:
+    '":'                 logit=25.422
+    '":{"'               logit=24.594
+    '"'                  logit=17.281
+  → Chosen: '":'
+
+--- Step 11 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'Ġ{"'                logit=22.453
+    [✓] '{"'                 logit=22.297
+    [✗] 'Ġ[{"'               logit=21.031
+    [✗] '["'                 logit=20.766
+    [✓] '{'                  logit=20.609
+  Top 5 AFTER masking:
+    '{"'                 logit=22.297
+    '{'                  logit=20.609
+  → Chosen: '{"'
+
+--- Step 12 ---
+  Valid tokens: 4 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'name'               logit=22.578
+    [✗] 'args'               logit=17.453
+    [✗] 'message'            logit=17.391
+    [✗] 'user'               logit=17.297
+    [✗] 'arguments'          logit=17.234
+  Top 5 AFTER masking:
+    'name'               logit=22.578
+    'n'                  logit=13.047
+    'nam'                logit=11.055
+    'na'                 logit=9.273
+  → Chosen: 'name'
+
+--- Step 13 ---
+  Valid tokens: 7 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":"'                logit=25.422
+    [✓] '":'                 logit=25.219
+    [✗] '":{"'               logit=18.672
+    [✗] '":["'               logit=18.516
+    [✓] '":"/'               logit=17.953
+  Top 5 AFTER masking:
+    '":"'                logit=25.422
+    '":'                 logit=25.219
+    '":"/'               logit=17.953
+    '":""'               logit=16.859
+    '"'                  logit=16.156
+  → Chosen: '":"'
+
+--- Step 14 ---
+  Valid tokens: 89979 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'john'               logit=24.062
+    [✓] 'j'                  logit=17.969
+    [✓] 'John'               logit=17.891
+    [✓] 'Ġjohn'              logit=16.625
+    [✓] 'hello'              logit=15.742
+  Top 5 AFTER masking:
+    'john'               logit=24.062
+    'j'                  logit=17.969
+    'John'               logit=17.891
+    'Ġjohn'              logit=16.625
+    'hello'              logit=15.742
+  → Chosen: 'john'
+
+--- Step 15 ---
+  Valid tokens: 89979 / 151936
+  Top 5 BEFORE masking:
+    [✗] '"}}Ċ'               logit=21.953
+    [✓] '"}'                 logit=21.062
+    [✗] '","'                logit=19.500
+    [✓] '"}}'                logit=19.219
+    [✗] '",'                 logit=19.031
+  Top 5 AFTER masking:
+    '"}'                 logit=21.062
+    '"}}'                logit=19.219
+    '"'                  logit=15.836
+    's'                  logit=11.938
+    '?'                  logit=11.625
+  → Chosen: '"}'
+
+--- Step 16 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✗] '}ĊĊ'                logit=27.281
+    [✗] '}Ċ'                 logit=22.594
+    [✗] ',"'                 logit=19.500
+    [✗] 'Ġ}ĊĊ'               logit=17.922
+    [✗] '}ĊĊĊ'               logit=17.625
+  Top 5 AFTER masking:
+    '}'                  logit=14.117
+  → Chosen: '}'
+  -> fn_greet({'name': 'john'})
+Processing: subtract 10 from 50
+
+--- Step 0 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'Ġ{"'                logit=20.281
+    [✗] 'Ġ{Ċ'                logit=19.828
+    [✗] 'Ġ{'                 logit=19.453
+    [✗] 'ĠĊ'                 logit=17.969
+    [✗] 'ĠĊĊ'                logit=16.969
+  Top 5 AFTER masking:
+    '{"'                 logit=13.297
+    '{'                  logit=8.117
+  → Chosen: '{"'
+
+--- Step 1 ---
+  Valid tokens: 4 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'result'             logit=19.188
+    [✗] 'response'           logit=18.984
+    [✗] 'function'           logit=18.969
+    [✗] 'user'               logit=18.062
+    [✗] 'request'            logit=17.828
+  Top 5 AFTER masking:
+    'name'               logit=15.000
+    'n'                  logit=11.188
+    'na'                 logit=7.469
+    'nam'                logit=6.031
+  → Chosen: 'name'
+
+--- Step 2 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":"'                logit=24.328
+    [✓] '":'                 logit=23.609
+    [✗] '":"","'             logit=18.859
+    [✗] '","'                logit=17.312
+    [✗] '_of'                logit=17.141
+  Top 5 AFTER masking:
+    '":"'                logit=24.328
+    '":'                 logit=23.609
+    '"'                  logit=16.359
+  → Chosen: '":"'
+
+--- Step 3 ---
+  Valid tokens: 2 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'user'               logit=17.656
+    [✗] 'User'               logit=17.469
+    [✗] 'John'               logit=15.906
+    [✗] 'A'                  logit=15.102
+    [✗] 'test'               logit=15.008
+  Top 5 AFTER masking:
+    'f'                  logit=12.250
+    'fn'                 logit=9.289
+  → Chosen: 'f'
+
+--- Step 4 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'ro'                 logit=16.203
+    [✗] '1'                  logit=15.805
+    [✗] '","'                logit=15.391
+    [✗] 'uj'                 logit=15.273
+    [✗] 'iona'               logit=15.078
+  Top 5 AFTER masking:
+    'n'                  logit=-6.242
+  → Chosen: 'n'
+
+--- Step 5 ---
+  Valid tokens: 16 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_sub'               logit=24.859
+    [✓] '_add'               logit=21.547
+    [✓] '_get'               logit=20.047
+    [✓] '_g'                 logit=18.859
+    [✗] '","'                logit=17.594
+  Top 5 AFTER masking:
+    '_sub'               logit=24.859
+    '_add'               logit=21.547
+    '_get'               logit=20.047
+    '_g'                 logit=18.859
+    '_'                  logit=14.609
+  → Chosen: '_sub'
+
+--- Step 6 ---
+  Valid tokens: 5 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'stitute'            logit=33.312
+    [✓] 'stit'               logit=25.844
+    [✗] 'tract'              logit=22.859
+    [✗] 'stitution'          logit=20.500
+    [✓] 'st'                 logit=20.391
+  Top 5 AFTER masking:
+    'stitute'            logit=33.312
+    'stit'               logit=25.844
+    'st'                 logit=20.391
+    'sti'                logit=16.328
+    's'                  logit=3.111
+  → Chosen: 'stitute'
+
+--- Step 7 ---
+  Valid tokens: 5 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_string'            logit=30.266
+    [✗] '","'                logit=21.922
+    [✗] '",'                 logit=19.516
+    [✓] '_str'               logit=18.969
+    [✗] '_with'              logit=18.969
+  Top 5 AFTER masking:
+    '_string'            logit=30.266
+    '_str'               logit=18.969
+    '_'                  logit=17.172
+    '_s'                 logit=15.117
+    '_st'                logit=13.922
+  → Chosen: '_string'
+
+--- Step 8 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_with'              logit=31.719
+    [✗] '","'                logit=24.250
+    [✗] '",'                 logit=22.141
+    [✗] '",Ċ'                logit=20.266
+    [✗] '_without'           logit=19.625
+  Top 5 AFTER masking:
+    '_with'              logit=31.719
+    '_'                  logit=17.828
+    '_w'                 logit=17.078
+  → Chosen: '_with'
+
+--- Step 9 ---
+  Valid tokens: 5 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_regex'             logit=34.094
+    [✗] '_regression'        logit=21.422
+    [✗] '_regular'           logit=20.625
+    [✓] '_re'                logit=20.469
+    [✓] '_reg'               logit=20.250
+  Top 5 AFTER masking:
+    '_regex'             logit=34.094
+    '_re'                logit=20.469
+    '_reg'               logit=20.250
+    '_'                  logit=18.031
+    '_r'                 logit=13.914
+  → Chosen: '_regex'
+
+--- Step 10 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '","'                logit=24.078
+    [✓] '",'                 logit=20.016
+    [✗] '",Ċ'                logit=19.188
+    [✗] '"}'                 logit=17.062
+    [✗] '"},{"'              logit=16.172
+  Top 5 AFTER masking:
+    '","'                logit=24.078
+    '",'                 logit=20.016
+    '"'                  logit=15.695
+  → Chosen: '","'
+
+--- Step 11 ---
+  Valid tokens: 7 / 151936
+  Top 5 BEFORE masking:
+    [✗] 'arguments'          logit=24.531
+    [✗] 'args'               logit=21.734
+    [✗] 'source'             logit=21.734
+    [✗] 'function'           logit=21.297
+    [✓] 'parameters'         logit=20.844
+  Top 5 AFTER masking:
+    'parameters'         logit=20.844
+    'parameter'          logit=16.312
+    'param'              logit=15.773
+    'para'               logit=12.164
+    'p'                  logit=10.648
+  → Chosen: 'parameters'
+
+--- Step 12 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":{"'               logit=28.016
+    [✓] '":'                 logit=26.344
+    [✗] '":"'                logit=25.016
+    [✗] '":["'               logit=22.016
+    [✗] '":[{"'              logit=21.469
+  Top 5 AFTER masking:
+    '":{"'               logit=28.016
+    '":'                 logit=26.344
+    '"'                  logit=17.641
+  → Chosen: '":{"'
+
+--- Step 13 ---
+  Valid tokens: 3 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'source'             logit=23.969
+    [✗] 'regex'              logit=19.484
+    [✗] 'replacement'        logit=16.984
+    [✗] 'src'                logit=16.859
+    [✗] 'arguments'          logit=16.688
+  Top 5 AFTER masking:
+    'source'             logit=23.969
+    's'                  logit=12.789
+    'so'                 logit=10.117
+  → Chosen: 'source'
+
+--- Step 14 ---
+  Valid tokens: 5 / 151936
+  Top 5 BEFORE masking:
+    [✓] '_string'            logit=30.453
+    [✗] '":"'                logit=23.500
+    [✗] '":'                 logit=21.688
+    [✓] '_str'               logit=20.844
+    [✗] 'String'             logit=19.031
+  Top 5 AFTER masking:
+    '_string'            logit=30.453
+    '_str'               logit=20.844
+    '_'                  logit=15.344
+    '_s'                 logit=15.156
+    '_st'                logit=13.633
+  → Chosen: '_string'
+
+--- Step 15 ---
+  Valid tokens: 8 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":"'                logit=28.656
+    [✓] '":'                 logit=25.594
+    [✓] '":"/'               logit=20.516
+    [✓] '":"","'             logit=19.422
+    [✓] '":"+'               logit=19.266
+  Top 5 AFTER masking:
+    '":"'                logit=28.656
+    '":'                 logit=25.594
+    '":"/'               logit=20.516
+    '":"","'             logit=19.422
+    '":"+'               logit=19.266
+  → Chosen: '":"'
+
+--- Step 16 ---
+  Valid tokens: 90024 / 151936
+  Top 5 BEFORE masking:
+    [✓] '5'                  logit=19.234
+    [✓] 'hello'              logit=17.266
+    [✓] '1'                  logit=16.406
+    [✓] 'test'               logit=16.156
+    [✓] 'some'               logit=15.969
+  Top 5 AFTER masking:
+    '5'                  logit=19.234
+    'hello'              logit=17.266
+    '1'                  logit=16.406
+    'test'               logit=16.156
+    'some'               logit=15.969
+  → Chosen: '5'
+
+--- Step 17 ---
+  Valid tokens: 90024 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=22.828
+    [✓] '5'                  logit=18.047
+    [✓] '","'                logit=15.922
+    [✓] '2'                  logit=15.523
+    [✓] '\\n'                logit=14.953
+  Top 5 AFTER masking:
+    '0'                  logit=22.828
+    '5'                  logit=18.047
+    '","'                logit=15.922
+    '2'                  logit=15.523
+    '\\n'                logit=14.953
+  → Chosen: '0'
+
+--- Step 18 ---
+  Valid tokens: 90024 / 151936
+  Top 5 BEFORE masking:
+    [✓] '","'                logit=18.922
+    [✓] '\\n'                logit=17.562
+    [✓] '.'                  logit=17.125
+    [✓] 'Ġ'                  logit=16.906
+    [✓] '-'                  logit=16.781
+  Top 5 AFTER masking:
+    '","'                logit=18.922
+    '\\n'                logit=17.562
+    '.'                  logit=17.125
+    'Ġ'                  logit=16.906
+    '-'                  logit=16.781
+  → Chosen: '","'
+
+--- Step 19 ---
+  Valid tokens: 4 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'regex'              logit=25.609
+    [✗] 'replacement'        logit=20.125
+    [✗] 'pattern'            logit=17.703
+    [✗] 'a'                  logit=17.484
+    [✗] 'source'             logit=16.922
+  Top 5 AFTER masking:
+    'regex'              logit=25.609
+    'reg'                logit=16.234
+    're'                 logit=14.930
+    'r'                  logit=7.754
+  → Chosen: 'regex'
+
+--- Step 20 ---
+  Valid tokens: 8 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":"'                logit=28.047
+    [✓] '":"/'               logit=25.328
+    [✓] '":'                 logit=22.578
+    [✗] '_pattern'           logit=20.828
+    [✓] '":"+'               logit=19.984
+  Top 5 AFTER masking:
+    '":"'                logit=28.047
+    '":"/'               logit=25.328
+    '":'                 logit=22.578
+    '":"+'               logit=19.984
+    '":"","'             logit=19.438
+  → Chosen: '":"'
+
+--- Step 21 ---
+  Valid tokens: 90024 / 151936
+  Top 5 BEFORE masking:
+    [✓] '1'                  logit=20.125
+    [✓] '^'                  logit=17.953
+    [✓] '.*'                 logit=17.344
+    [✓] '-'                  logit=17.281
+    [✓] '\\\\'               logit=17.031
+  Top 5 AFTER masking:
+    '1'                  logit=20.125
+    '^'                  logit=17.953
+    '.*'                 logit=17.344
+    '-'                  logit=17.281
+    '\\\\'               logit=17.031
+  → Chosen: '1'
+
+--- Step 22 ---
+  Valid tokens: 90024 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=24.859
+    [✓] '","'                logit=18.547
+    [✓] '1'                  logit=16.797
+    [✓] '",'                 logit=16.359
+    [✓] '*'                  logit=16.188
+  Top 5 AFTER masking:
+    '0'                  logit=24.859
+    '","'                logit=18.547
+    '1'                  logit=16.797
+    '",'                 logit=16.359
+    '*'                  logit=16.188
+  → Chosen: '0'
+
+--- Step 23 ---
+  Valid tokens: 90024 / 151936
+  Top 5 BEFORE masking:
+    [✓] '","'                logit=22.359
+    [✓] '",'                 logit=19.359
+    [✓] '\\\\'               logit=17.203
+    [✗] '"}'                 logit=16.719
+    [✓] '"'                  logit=16.578
+  Top 5 AFTER masking:
+    '","'                logit=22.359
+    '",'                 logit=19.359
+    '\\\\'               logit=17.203
+    '"'                  logit=16.578
+    '|'                  logit=16.422
+  → Chosen: '","'
+
+--- Step 24 ---
+  Valid tokens: 5 / 151936
+  Top 5 BEFORE masking:
+    [✓] 'replacement'        logit=33.281
+    [✓] 're'                 logit=27.281
+    [✗] 'placement'          logit=23.656
+    [✓] 'replace'            logit=21.469
+    [✗] 'Ġreplacement'       logit=21.469
+  Top 5 AFTER masking:
+    'replacement'        logit=33.281
+    're'                 logit=27.281
+    'replace'            logit=21.469
+    'rep'                logit=15.484
+    'r'                  logit=13.758
+  → Chosen: 'replacement'
+
+--- Step 25 ---
+  Valid tokens: 7 / 151936
+  Top 5 BEFORE masking:
+    [✓] '":"'                logit=30.797
+    [✓] '":'                 logit=25.375
+    [✓] '":""'               logit=22.547
+    [✗] '":"","'             logit=21.812
+    [✓] '":"+'               logit=20.984
+  Top 5 AFTER masking:
+    '":"'                logit=30.797
+    '":'                 logit=25.375
+    '":""'               logit=22.547
+    '":"+'               logit=20.984
+    '":"/'               logit=19.250
+  → Chosen: '":"'
+
+--- Step 26 ---
+  Valid tokens: 89979 / 151936
+  Top 5 BEFORE masking:
+    [✓] '1'                  logit=21.266
+    [✓] '5'                  logit=21.016
+    [✓] '0'                  logit=19.453
+    [✓] '9'                  logit=18.844
+    [✓] '2'                  logit=18.641
+  Top 5 AFTER masking:
+    '1'                  logit=21.266
+    '5'                  logit=21.016
+    '0'                  logit=19.453
+    '9'                  logit=18.844
+    '2'                  logit=18.641
+  → Chosen: '1'
+
+--- Step 27 ---
+  Valid tokens: 89979 / 151936
+  Top 5 BEFORE masking:
+    [✓] '0'                  logit=25.453
+    [✓] '5'                  logit=21.516
+    [✓] '9'                  logit=19.812
+    [✓] '1'                  logit=19.281
+    [✗] '"}}Ċ'               logit=18.469
+  Top 5 AFTER masking:
+    '0'                  logit=25.453
+    '5'                  logit=21.516
+    '9'                  logit=19.812
+    '1'                  logit=19.281
+    '4'                  logit=18.406
+  → Chosen: '0'
+
+--- Step 28 ---
+  Valid tokens: 89979 / 151936
+  Top 5 BEFORE masking:
+    [✗] '"}}Ċ'               logit=21.594
+    [✓] '"}'                 logit=19.953
+    [✓] '0'                  logit=19.719
+    [✓] '"}}'                logit=19.609
+    [✗] '","'                logit=18.484
+  Top 5 AFTER masking:
+    '"}'                 logit=19.953
+    '0'                  logit=19.719
+    '"}}'                logit=19.609
+    '"'                  logit=17.125
+    '1'                  logit=15.125
+  → Chosen: '"}'
+
+--- Step 29 ---
+  Valid tokens: 1 / 151936
+  Top 5 BEFORE masking:
+    [✗] '}ĊĊ'                logit=27.547
+    [✗] '}Ċ'                 logit=22.578
+    [✗] ',"'                 logit=19.828
+    [✗] 'Ġ}ĊĊ'               logit=19.781
+    [✗] '?'                  logit=18.859
+  Top 5 AFTER masking:
+    '}'                  logit=15.445
+  → Chosen: '}'
+  -> fn_substitute_string_with_regex({'source_string': '50', 'regex': '10', 'replacement': '10'})
+Done. 8 results written to data/output/stress.json

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": "replace the character 'r' in the word 'strawberry' with the character 'k'",
+    "name": "fn_substitute_string_with_regex",
+    "parameters": {
+      "source_string": "strawberry",
+      "regex": "r",
+      "replacement": "k"
+    }
+  }
+]
