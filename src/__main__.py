@@ -41,8 +41,12 @@ def main() -> None:
     from .vocabulary import Vocabulary
     from .decoder import decode
 
-    functions = load_functions(args.functions_definition)
-    prompts = load_prompts(args.input)
+    try:
+        functions = load_functions(args.functions_definition)
+        prompts = load_prompts(args.input)
+    except (FileNotFoundError, ValueError) as e:
+        print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
 
 
     model = Small_LLM_Model()
