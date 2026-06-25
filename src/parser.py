@@ -20,11 +20,16 @@ def load_functions(filename: str) -> list[FunctionDefinition]:
 
     Raises:
         FileNotFoundError: If the file does not exist.
+        PermissionError: If the file cannot be read.
         ValueError: If the file contains invalid JSON.
     """
     if not os.path.exists(filename):
         raise FileNotFoundError(f"Functions file {filename} not found.")
-    with open(filename, 'r') as f:
+    try:
+        f_handle = open(filename, 'r')
+    except PermissionError:
+        raise PermissionError(f"Functions file {filename} is not readable.")
+    with f_handle as f:
         try:
             data: list[Any] = json.load(f)
         except json.JSONDecodeError as e:
@@ -55,11 +60,16 @@ def load_prompts(filename: str) -> list[TestPrompt]:
 
     Raises:
         FileNotFoundError: If the file does not exist.
+        PermissionError: If the file cannot be read.
         ValueError: If the file contains invalid JSON.
     """
     if not os.path.exists(filename):
         raise FileNotFoundError(f"Prompts file {filename} not found.")
-    with open(filename, "r") as f:
+    try:
+        f_handle = open(filename, "r")
+    except PermissionError:
+        raise PermissionError(f"Prompts file {filename} is not readable.")
+    with f_handle as f:
         try:
             data: list[Any] = json.load(f)
         except json.JSONDecodeError as e:

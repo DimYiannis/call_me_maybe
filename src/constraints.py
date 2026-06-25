@@ -80,7 +80,7 @@ class Constraint:
 
         self._alphabet: list[str] = [chr(c) for c in range(32, 127)]
 
-        # mutable parse state
+        # mutable parse state for FSM
         self._program_id: str = "prefix"
         self._index: int = 0
         self._lit_pos: int = 0
@@ -261,7 +261,7 @@ class Constraint:
             return "consumed"
         return "reject"
 
-    # core stepping
+    # FSM transition: advance parse state by one character
 
     def _step(self, ch: str) -> bool:
         """
