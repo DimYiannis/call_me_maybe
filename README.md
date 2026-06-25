@@ -1,5 +1,3 @@
-*This project has been created as part of the 42 curriculum by ydimitra.*
-
 
 # call me maybe — Function Calling in LLMs
 Function calling tool that translates natural language
